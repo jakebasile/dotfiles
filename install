@@ -1,0 +1,12 @@
+#!/usr/bin/env sh
+
+for source_file in $( find files -type f ); do
+    dest_file=$HOME/`echo $source_file | sed "s/files\//./"`
+    if [[ -e dest_file ]]; then
+        echo "$dest_file already exists. Skipping."
+    else
+        echo "ln $source_file $dest_file"
+        ln $source_file $dest_file
+    fi
+done
+

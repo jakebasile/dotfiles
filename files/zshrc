@@ -1,0 +1,74 @@
+# Jake Basile's .zshrc
+#
+
+# History
+
+HISTFILE=~/.zsh_history
+HISTSIZE=10000
+SAVEHIST=10000
+
+# vi mode
+
+bindkey -v
+
+# Options
+
+setopt appendhistory beep extendedglob nomatch
+setopt PROMPT_SUBST
+setopt CDABLEVARS
+setopt CORRECT
+setopt GLOBDOTS
+setopt HISTIGNORESPACE
+setopt HISTIGNOREDUPS
+setopt INC_APPEND_HISTORY
+setopt SHARE_HISTORY
+
+# Functions
+
+function get_branch() {
+    git branch --no-color 2> /dev/null | grep '\*' | sed 's/\* \(.*\)/:%{%F{yellow}%}\1%{%f%}/'
+}
+
+# Completion
+
+autoload -Uz compinit
+compinit
+zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
+zstyle ':completion:*' menu select
+zstyle ':completion:*' max-errors 3
+
+# Prompts
+
+PROMPT='%m:%{%F{cyan}%}%1~%{%f%}$(get_branch) %{%F{white}%}%D{%L:%M:%S} %(!.%{%F{red}%}#%{%f%}.%{%F{green}%}$%{%f%}) '
+SPROMPT='%{%F{red}%}%R%{%f%} -> %{%F{blue}%}%r%{%f%} (y, n, a, e)'
+TMOUT=1
+TRAPALRM() {
+    zle reset-prompt
+}
+
+# Environment
+source ~/.path
+export EDITOR='vim'
+
+# Aliases
+
+alias ls='ls -lhFG' la='ls -lahFG' # Verbose LS
+alias 'pg'='ps -e | grep $1' # Search processes
+alias top=htop # htop > top
+alias tup='tmux new -ADs' # Attach session, creating if it doesn't exist.
+alias tls='tmux list-sessions'
+alias t="echo $TMUX"
+alias gpg=gpg2
+# Inside a tmux window, alias pbpaste and pbcopy to use tmux buffer.
+if [[ -n "$TMUX" ]]; then
+    alias pbcopy="tmux loadb -"
+    alias pbpaste="tmux saveb -"
+fi
+alias xmlformat="xmllint --format -"
+alias pbxml="pbpaste | xmlformat"
+alias tree="tree -phF --du"
+
+# Misc
+
+bindkey "^R" history-incremental-search-backward
+

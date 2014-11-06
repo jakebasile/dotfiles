@@ -1,0 +1,51 @@
+# Jake Basile's .gitconfig
+#
+[user]
+	name = Jake Basile
+	email = jake@jakebasile.com
+[core]
+	excludesfile = /Users/jake/.gitignore_global
+    editor = vim -f
+[mergetool "vimdiff"]
+    cmd = /usr/local/bin/vimdiff -fo "$REMOTE" "$MERGED" "$LOCAL"
+[merge]
+    tool = vimdiff
+[difftool "vimdiff"]
+    cmd = /usr/local/bin/vimdiff -fo "$REMOTE" "$LOCAL"
+[diff]
+    tool = vimdiff
+[difftool]
+    prompt = false
+[mergetool]
+    prompt = false
+[color]
+    ui = auto
+[color "branch"]
+    current = yellow reverse
+    local = yellow
+    remote = green
+[color "diff"]
+    meta = yellow bold
+    frag = magenta bold
+    old = red bold
+    new = green bold
+[color "status"]
+    added = yellow
+    changed = green
+    untracked = cyan
+[pretty]
+    theone=format:%C(yellow)%h %Cblue%an <%ae> (%G?) %Cgreen%cr%Cred%d%n%s%n
+[alias]
+    serve = !git daemon --reuseaddr --verbose  --base-path=. --export-all ./.git
+    slog = log --graph --format=theone
+    slag = log --graph --format=theone --all
+    stat = diff --stat
+    st = status
+    co = checkout
+    br = branch
+    df = diff
+    dt = difftool
+    scommit = commit -S
+[push]
+	default = upstream
+

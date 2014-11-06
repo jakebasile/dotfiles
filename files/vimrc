@@ -1,0 +1,119 @@
+" Jake Basile's .vimrc
+"
+" Plugins used:
+"   pathogen
+"   nerdtree
+"   tagbar
+"   airline
+"   classpath
+"   coffee-script
+"   dispatch
+"   fireplace
+"   flake8
+"   fugitive
+"   indent-guides
+"   leiningen
+"   nerdtree-tabs
+"   projectionist
+"   surround
+
+execute pathogen#infect()
+syntax on
+filetype indent plugin on
+
+" Colors
+
+color zenburn
+let g:airline_theme="zenburn"
+let g:airline#exenstions#tagbar#enabled=1
+set background=dark
+set t_Co=256
+
+" Filetypes
+
+augroup filetypedetect
+    au! BufRead,BufNewFile *.cls setfiletype tex
+    au! BufRead,BufNewFile *.lco setfiletype tex
+    au! BufRead,BufNewFile *.dot setfiletype dot
+    au! BufRead,BufNewFile *.clj setfiletype clojure
+    au! BufRead,BufNewFile *.cljs setfiletype clojure
+    au! BufRead,BufNewFile *.html setfiletype html
+    au! BufRead,BufNewFile *.htm setfiletype htm
+    au! BufRead,BufNewFile *.md setfiletype markdown
+augroup END
+autocmd FileType clojure setlocal shiftwidth=2
+autocmd FileType clojure setlocal tabstop=2
+autocmd FileType clojure setlocal softtabstop=2
+autocmd FileType html setlocal shiftwidth=2
+autocmd FileType html setlocal tabstop=2
+autocmd FileType html setlocal softtabstop=2
+autocmd FileType coffee setlocal shiftwidth=2
+autocmd FileType coffee setlocal tabstop=2
+autocmd FileType coffee setlocal softtabstop=2
+autocmd FileType go setlocal noexpandtab
+
+" Make backup directory less annoying
+
+set directory=~/.vimbackups//
+set backupdir=~/.vimbackups//
+
+" Misc
+
+set nocompatible
+set autoread
+set laststatus=2
+set encoding=utf-8
+let html_no_rendering=1
+set ruler
+set number
+set numberwidth=3
+set tabstop=4
+set expandtab
+set shiftwidth=4
+set softtabstop=4
+set autoindent
+set cursorline
+set wildignore+=*.pyc,.git/*
+set nohlsearch
+set noshowmode
+
+" GUI Options
+
+set guifont=Source\ Code\ Pro:h14
+set guioptions=egmrt
+set guioptions-=r
+set guioptions-=L
+set mouse=
+
+" Tagbar
+
+let g:tagbar_autoclose=1
+let g:tagbar_autofocus=1
+
+" NERDTree
+
+let NERDTreeIgnore = ['\~$', '\.pyc$', '\.rdb$', '\.sock$', '\.pid$', '\.egg-info', 'dist']
+let NERDTreeQuitOnOpen = 1
+
+" Bindings
+
+map <C-s> :set spell! spelllang=en_us<CR>
+map <C-t> :NERDTreeTabsToggle<CR>
+map <C-d> :TagbarToggle<CR>
+imap <C-Cr> <Esc>
+nmap <C-V> "+gP
+imap <C-V> <ESC>"+gPi
+vmap <C-C> "+y 
+" Tab Movement
+nmap <A-1> 1gt
+nmap <A-2> 2gt
+nmap <A-3> 3gt
+nmap <A-4> 4gt
+nmap <A-5> 5gt
+nmap <A-6> 6gt
+nmap <A-7> 7gt
+nmap <A-8> 8gt
+nmap <A-9> 9gt
+map <C-i> :IndentGuidesToggle<CR>
+nnoremap <Space> @q
+
