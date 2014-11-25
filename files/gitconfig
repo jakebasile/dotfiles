@@ -2,7 +2,7 @@
 #
 [user]
 	name = Jake Basile
-	email = jake@jakebasile.com
+	email = jkbsl.git@icloud.com
 [core]
 	excludesfile = /Users/jake/.gitignore_global
     editor = vim -f
@@ -43,9 +43,10 @@
     st = status
     co = checkout
     br = branch
+    bra = branch -a
     df = diff
     dt = difftool
-    scommit = commit -S
+    cm = commit
 [push]
 	default = upstream
 
