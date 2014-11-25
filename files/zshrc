@@ -1,5 +1,4 @@
 # Jake Basile's .zshrc
-#
 
 # History
 
@@ -47,13 +46,13 @@ TRAPALRM() {
 }
 
 # Environment
+
 source ~/.path
 export EDITOR='vim'
 
 # Aliases
 
 alias ls='ls -lhFG' la='ls -lahFG' # Verbose LS
-alias 'pg'='ps -e | grep $1' # Search processes
 alias top=htop # htop > top
 alias tup='tmux new -ADs' # Attach session, creating if it doesn't exist.
 alias tls='tmux list-sessions'
