@@ -1,11 +1,11 @@
-# jkbsl/dotfiles
+# jakebasile/dotfiles
 
 These are my dotfiles. I like them.
 
 ## Installation
 
 ```bash
-$ git clone git@github.com:jkbsl/dotfiles.git
+$ git clone git@github.com:jakebasile/dotfiles.git
 $ cd dotfiles
 $ ./install
 ```
