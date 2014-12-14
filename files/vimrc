@@ -6,16 +6,15 @@
 "   tagbar
 "   airline
 "   classpath
-"   coffee-script
 "   dispatch
 "   fireplace
-"   flake8
 "   fugitive
 "   indent-guides
 "   leiningen
 "   nerdtree-tabs
 "   projectionist
 "   surround
+"   rainbow parentheses
 
 execute pathogen#infect()
 syntax on
@@ -92,8 +91,15 @@ let g:tagbar_autofocus=1
 
 " NERDTree
 
-let NERDTreeIgnore = ['\~$', '\.pyc$', '\.rdb$', '\.sock$', '\.pid$', '\.egg-info', 'dist']
+let NERDTreeIgnore = ['\~$', '\.pyc$', '\.rdb$', '\.sock$', '\.pid$', '\.egg-info', 'dist', 'target']
 let NERDTreeQuitOnOpen = 1
+
+" Rainbow Parentheses
+
+au VimEnter * RainbowParenthesesToggle
+au Syntax * RainbowParenthesesLoadRound
+au Syntax * RainbowParenthesesLoadSquare
+au Syntax * RainbowParenthesesLoadBraces
 
 " Bindings
 
