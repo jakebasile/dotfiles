@@ -58,6 +58,7 @@ TRAPALRM() {
 
 source ~/.path
 export EDITOR='vim'
+source /usr/local/opt/autoenv/activate.sh
 
 # Aliases
 
