@@ -28,6 +28,15 @@ function get_branch() {
     git branch --no-color 2> /dev/null | grep '\*' | sed 's/\* \(.*\)/:%{%F{yellow}%}\1%{%f%}/'
 }
 
+# this calls tree, ignoring the target directory if it sees a project.clj
+function stree() {
+    if [[ -a project.clj ]]; then
+        /usr/local/bin/tree -phFI target --du
+    else
+        /usr/local/bin/tree -phF --du
+    fi
+}
+
 # Completion
 
 autoload -Uz compinit
@@ -65,7 +74,8 @@ if [[ -n "$TMUX" ]]; then
 fi
 alias xmlformat="xmllint --format -"
 alias pbxml="pbpaste | xmlformat"
-alias tree="tree -phF --du"
+#alias tree="tree -phF --du"
+alias tree=stree
 
 # Misc
 
