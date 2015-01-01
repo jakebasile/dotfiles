@@ -1,0 +1,11 @@
+# OS cruft
+*~
+.DS_Store
+*.swp
+# virtualenv directories
+env/
+# environment var files
+.env
+# temp certs and keys from ssltunnel
+cert
+key
