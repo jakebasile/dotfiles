@@ -29,12 +29,30 @@ function get_branch() {
 }
 
 # this calls tree, ignoring the target directory if it sees a project.clj
-function stree() {
+function tree() {
     if [[ -a project.clj ]]; then
-        /usr/local/bin/tree -phFI target --du
+        /usr/local/bin/tree -phFI target --du $@ | less -FX
     else
-        /usr/local/bin/tree -phF --du
+        /usr/local/bin/tree -phF --du $@ | less -FX
     fi
+}
+
+# these wrap up curl with some default arguments and pretty formatted output.
+
+function cjson() {
+  curl -sD /dev/stderr -H "accept: application/json" -H "content-type: application/json" \
+    $@ | jq .
+}
+
+function chtml() {
+  curl -sD /dev/stderr -H "accept: text/html" $@ | tidy -ibq -wrap 0 -f /dev/null
+}
+
+alias cedn='curl -iH "accept: application/edn" -H "content-type: application/edn"'
+
+# Thanks, dogbane of http://unix.stackexchange.com/a/30486
+function calc() {
+  bc -l <<< "$@"
 }
 
 # Completion
@@ -68,19 +86,15 @@ alias tup='tmux new -ADs' # Attach session, creating if it doesn't exist.
 alias tls='tmux list-sessions'
 alias t="echo $TMUX"
 alias gpg=gpg2
-# Inside a tmux window, alias pbpaste and pbcopy to use tmux buffer.
-if [[ -n "$TMUX" ]]; then
-    alias pbcopy="tmux loadb -"
-    alias pbpaste="tmux saveb -"
-fi
 alias xmlformat="xmllint --format -"
 alias pbxml="pbpaste | xmlformat"
-#alias tree="tree -phF --du"
-alias tree=stree
+alias dinit='$(boot2docker shellinit)'
+
+#alias cjson='curl -iH "accept: application/json" -H "content-type: application/json"'
 
 # Misc
 
 bindkey "^R" history-incremental-search-backward
-GPG_TTY=$(tty) 
-export GPG_TTY 
+GPG_TTY=$(tty)
+export GPG_TTY
 
