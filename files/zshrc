@@ -41,14 +41,16 @@ function tree() {
 
 function cjson() {
   curl -sD /dev/stderr -H "accept: application/json" -H "content-type: application/json" \
-    $@ | jq .
+    $@ | jq . | less -FX
 }
 
 function chtml() {
   curl -sD /dev/stderr -H "accept: text/html" $@ | tidy -ibq -wrap 0 -f /dev/null
 }
 
-alias cedn='curl -iH "accept: application/edn" -H "content-type: application/edn"'
+function cxml() {
+  curl -sD /dev/stderr -H "accept: application/xml" $@ | xmllint --format -
+}
 
 # Thanks, dogbane of http://unix.stackexchange.com/a/30486
 function calc() {
@@ -81,7 +83,7 @@ source /usr/local/opt/autoenv/activate.sh
 # Aliases
 
 alias ls='ls -lhFG' la='ls -lahFG' # Verbose LS
-alias top=htop # htop > top
+alias top='sudo htop' # htop > top
 alias tup='tmux new -ADs' # Attach session, creating if it doesn't exist.
 alias tls='tmux list-sessions'
 alias t="echo $TMUX"
@@ -89,8 +91,8 @@ alias gpg=gpg2
 alias xmlformat="xmllint --format -"
 alias pbxml="pbpaste | xmlformat"
 alias dinit='$(boot2docker shellinit)'
-
-#alias cjson='curl -iH "accept: application/json" -H "content-type: application/json"'
+alias cedn='curl -iH "accept: application/edn" -H "content-type: application/edn"'
+alias git=hub
 
 # Misc
 

@@ -39,6 +39,7 @@ augroup filetypedetect
     au! BufRead,BufNewFile *.html setfiletype html
     au! BufRead,BufNewFile *.htm setfiletype htm
     au! BufRead,BufNewFile *.md setfiletype markdown
+    au! BufRead,BufNewFile *.yaml setfiletype yaml
 augroup END
 autocmd FileType clojure setlocal shiftwidth=2
 autocmd FileType clojure setlocal tabstop=2
@@ -50,6 +51,9 @@ autocmd FileType coffee setlocal shiftwidth=2
 autocmd FileType coffee setlocal tabstop=2
 autocmd FileType coffee setlocal softtabstop=2
 autocmd FileType go setlocal noexpandtab
+autocmd FileType yaml setlocal shiftwidth=2
+autocmd FileType yaml setlocal tabstop=2
+autocmd FileType yaml setlocal softtabstop=2
 
 " Make backup directory less annoying
 
@@ -66,10 +70,10 @@ let html_no_rendering=1
 set ruler
 set number
 set numberwidth=3
-set tabstop=4
+set tabstop=2
 set expandtab
-set shiftwidth=4
-set softtabstop=4
+set shiftwidth=2
+set softtabstop=2
 set autoindent
 set cursorline
 set wildignore+=*.pyc,.git/*
@@ -106,7 +110,7 @@ au Syntax * RainbowParenthesesLoadBraces
 map <C-s> :set spell! spelllang=en_us<CR>
 map <C-t> :NERDTreeTabsToggle<CR>
 map <C-d> :TagbarToggle<CR>
-imap <C-Cr> <Esc>
+nmap U <C-r>
 nmap <C-V> "+gP
 imap <C-V> <ESC>"+gPi
 vmap <C-C> "+y 
