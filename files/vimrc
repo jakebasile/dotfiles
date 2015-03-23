@@ -15,6 +15,9 @@
 "   projectionist
 "   surround
 "   rainbow parentheses
+"
+set nocompatible
+set backspace=2
 
 execute pathogen#infect()
 syntax on
@@ -27,6 +30,7 @@ let g:airline#exenstions#tagbar#enabled=1
 set background=dark
 set t_Co=256
 color zenburn
+set t_ut=
 
 " Filetypes
 
@@ -83,9 +87,9 @@ set noshowmode
 " GUI Options
 
 set guifont=Source\ Code\ Pro:h14
-set guioptions=egmrt
-set guioptions-=r
-set guioptions-=L
+set guioptions=egmt
+set guioptions-=rl
+set guioptions-=RL
 set mouse=
 
 " Tagbar
@@ -107,13 +111,16 @@ au Syntax * RainbowParenthesesLoadBraces
 
 " Bindings
 
+au FileType clojure noremap rr :Require<CR>
+au FileType clojure noremap rt :Require:RunTests<CR>
+
 map <C-s> :set spell! spelllang=en_us<CR>
 map <C-t> :NERDTreeTabsToggle<CR>
 map <C-d> :TagbarToggle<CR>
 nmap U <C-r>
 nmap <C-V> "+gP
 imap <C-V> <ESC>"+gPi
-vmap <C-C> "+y 
+vmap <C-C> "+y
 " Tab Movement
 nmap <A-1> 1gt
 nmap <A-2> 2gt

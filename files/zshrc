@@ -41,7 +41,12 @@ function tree() {
 
 function cjson() {
   curl -sD /dev/stderr -H "accept: application/json" -H "content-type: application/json" \
-    $@ | jq . | less -FX
+    $@ | jq -C -S . | less -FXr
+}
+
+function cedn() {
+  curl -sD /dev/stderr -H "accept: application/edn" -H "content-type: application/edn" \
+    $@ | ppedn | less -FXr
 }
 
 function chtml() {
@@ -79,6 +84,7 @@ TRAPALRM() {
 source ~/.path
 export EDITOR='vim'
 source /usr/local/opt/autoenv/activate.sh
+export LANG=en_US.UTF-8
 
 # Aliases
 
@@ -91,8 +97,8 @@ alias gpg=gpg2
 alias xmlformat="xmllint --format -"
 alias pbxml="pbpaste | xmlformat"
 alias dinit='$(boot2docker shellinit)'
-alias cedn='curl -iH "accept: application/edn" -H "content-type: application/edn"'
 alias git=hub
+alias jdate='date -u +"\"%Y-%m-%dT%H:%M:%SZ\""'
 
 # Misc
 
