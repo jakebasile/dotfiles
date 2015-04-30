@@ -13,8 +13,9 @@ bindkey -v
 # Options
 
 setopt appendhistory beep extendedglob nomatch
+setopt RCQUOTES
+setopt NOCLOBBER
 setopt PROMPT_SUBST
-setopt CDABLEVARS
 setopt CORRECT
 setopt GLOBDOTS
 setopt HISTIGNORESPACE
@@ -25,16 +26,16 @@ setopt SHARE_HISTORY
 # Functions
 
 function get_branch() {
-    git branch --no-color 2> /dev/null | grep '\*' | sed 's/\* \(.*\)/:%{%F{yellow}%}\1%{%f%}/'
+  git branch --no-color 2> /dev/null | grep '\*' | sed 's/\* \(.*\)/:%{%F{yellow}%}\1%{%f%}/'
 }
 
 # this calls tree, ignoring the target directory if it sees a project.clj
 function tree() {
-    if [[ -a project.clj ]]; then
-        /usr/local/bin/tree -phFI target --du $@ | less -FX
-    else
-        /usr/local/bin/tree -phF --du $@ | less -FX
-    fi
+  if [[ -a project.clj ]]; then
+      /usr/local/bin/tree -phFI target --du $@ | less -FX
+  else
+      /usr/local/bin/tree -phF --du $@ | less -FX
+  fi
 }
 
 # these wrap up curl with some default arguments and pretty formatted output.
@@ -76,15 +77,17 @@ PROMPT='%m:%{%F{cyan}%}%1~%{%f%}$(get_branch) %{%F{white}%}%D{%L:%M:%S} %(!.%{%F
 SPROMPT='%{%F{red}%}%R%{%f%} -> %{%F{blue}%}%r%{%f%} (y, n, a, e)'
 TMOUT=1
 TRAPALRM() {
-    zle reset-prompt
+  zle reset-prompt
 }
 
 # Environment
 
 source ~/.path
-export EDITOR='vim'
 source /usr/local/opt/autoenv/activate.sh
+
+export EDITOR='vim'
 export LANG=en_US.UTF-8
+export GPG_TTY=$(tty)
 
 # Aliases
 
@@ -98,11 +101,12 @@ alias xmlformat="xmllint --format -"
 alias pbxml="pbpaste | xmlformat"
 alias dinit='$(boot2docker shellinit)'
 alias git=hub
-alias jdate='date -u +"\"%Y-%m-%dT%H:%M:%SZ\""'
+alias jdate='date -uv +1y +"\"%Y-%m-%dT%H:%M:%SZ\""'
 
 # Misc
 
 bindkey "^R" history-incremental-search-backward
-GPG_TTY=$(tty)
-export GPG_TTY
+
+source /Users/jake/bin/google-cloud-sdk/path.zsh.inc
+source /Users/jake/bin/google-cloud-sdk/completion.zsh.inc
 
