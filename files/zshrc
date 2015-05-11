@@ -32,9 +32,9 @@ function get_branch() {
 # this calls tree, ignoring the target directory if it sees a project.clj
 function tree() {
   if [[ -a project.clj ]]; then
-      /usr/local/bin/tree -phFI target --du $@ | less -FX
+      /usr/bin/tree -phFI target --du $@ | less -FX
   else
-      /usr/local/bin/tree -phF --du $@ | less -FX
+      /usr/bin/tree -phF --du $@ | less -FX
   fi
 }
 
@@ -51,11 +51,11 @@ function cedn() {
 }
 
 function chtml() {
-  curl -sD /dev/stderr -H "accept: text/html" $@ | tidy -ibq -wrap 0 -f /dev/null
+  curl -sD /dev/stderr -H "accept: text/html" $@ | tidy -ibq -wrap 0 -f /dev/null | less -FXr
 }
 
 function cxml() {
-  curl -sD /dev/stderr -H "accept: application/xml" $@ | xmllint --format -
+  curl -sD /dev/stderr -H "accept: application/xml" $@ | xmllint --format - | less -FXr
 }
 
 # Thanks, dogbane of http://unix.stackexchange.com/a/30486
