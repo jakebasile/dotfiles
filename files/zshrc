@@ -38,6 +38,19 @@ function tree() {
   fi
 }
 
+function ppedn() {
+  local tmp=$(mktemp -p /tmp "ppedn-XXXXXXXX.clj")
+  echo "(require '[puget.printer :as puget])" >> $tmp
+  if [[ ! -z $1 ]]; then
+    # if given direct input, use that
+    echo "(puget/cprint $1)" >> $tmp
+  else
+    # if nothing was given directly, use stdin
+    echo "(puget/cprint $(cat))" >> $tmp
+  fi
+  lein with-profile ppedn run -m clojure.main $tmp
+}
+
 # these wrap up curl with some default arguments and pretty formatted output.
 
 function cjson() {
