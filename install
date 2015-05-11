@@ -1,4 +1,4 @@
-#!/usr/bin/env sh
+#!/usr/bin/env bash
 
 for source_file in $( find files -type f ); do
     dest_file=$HOME/`echo $source_file | sed "s/files\//./"`
