@@ -4,7 +4,7 @@
     name = Jake Basile
     email = jake@jakebasile.com
 [core]
-    excludesfile = /Users/jake/.gitignore_global
+    excludesfile = /home/jake/.gitignore_global
     editor = vim -f
 [mergetool "vimdiff"]
     cmd = /usr/local/bin/vimdiff -fo "$REMOTE" "$MERGED" "$LOCAL"
