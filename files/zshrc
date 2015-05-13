@@ -112,7 +112,8 @@ alias tls='tmux list-sessions'
 alias t="echo $TMUX"
 alias xmlformat="xmllint --format -"
 alias pbxml="pbpaste | xmlformat"
-alias jdate='date -uv +1y +"\"%Y-%m-%dT%H:%M:%SZ\""'
+alias jdate='date -ud "+1 year" +"\"%Y-%m-%dT%H:%M:%SZ\""'
+alias rm=trash
 
 # Misc
 
