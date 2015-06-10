@@ -48,7 +48,7 @@ function ppedn() {
     # if nothing was given directly, use stdin
     echo "(puget/cprint '$(cat))" >> $tmp
   fi
-  lein with-profile ppedn run -m clojure.main $tmp
+  lein with-profile ppedn run -m clojure.main $tmp 2> /dev/null
 }
 
 # these wrap up curl with some default arguments and pretty formatted output.
@@ -99,24 +99,25 @@ source ~/.path
 
 export EDITOR='vim'
 export LANG=en_US.UTF-8
-export GPG_TTY=$(tty)
+export GPG_TTY=`tty` 
 
 # Aliases
 
 alias pbcopy='xclip -in -sel clip'
 alias pbpaste='xclip -out -sel clip'
 alias ls='ls -lhFG' la='ls -lahFG' # Verbose LS
-alias top='sudo htop' # htop > top
-alias tup='tmux -2 new -ADs' # Attach session, creating if it doesn't exist.
+alias top='htop' # htop > top
+alias t='tmux -2 new-session -ADs'
 alias tls='tmux list-sessions'
-alias t="echo $TMUX"
+alias tcopy='tmux save-buffer - | pbcopy'
+alias tpaste='pbpaste | tmux load-buffer -'
 alias xmlformat="xmllint --format -"
 alias pbxml="pbpaste | xmlformat"
 alias jdate='date -ud "+1 year" +"\"%Y-%m-%dT%H:%M:%SZ\""'
 alias rm=trash
+alias gpg=gpg2
 
 # Misc
 
 bindkey "^R" history-incremental-search-backward
-
 

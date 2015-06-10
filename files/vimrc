@@ -101,6 +101,7 @@ let g:tagbar_autofocus=1
 
 let NERDTreeIgnore = ['\~$', '\.pyc$', '\.rdb$', '\.sock$', '\.pid$', '\.egg-info', 'dist', 'target']
 let NERDTreeQuitOnOpen = 1
+let g:NERDTreeDirArrows = 0
 
 " Rainbow Parentheses
 
