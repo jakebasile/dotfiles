@@ -86,7 +86,7 @@ set noshowmode
 
 " GUI Options
 
-set guifont=Source\ Code\ Pro:h14
+set guifont=Roboto\ Mono\ Regular\ 11
 set guioptions=egmt
 set guioptions-=rl
 set guioptions-=RL
@@ -99,8 +99,10 @@ let g:tagbar_autofocus=1
 
 " NERDTree
 
-let NERDTreeIgnore = ['\~$', '\.pyc$', '\.rdb$', '\.sock$', '\.pid$', '\.egg-info', 'dist', 'target']
+let NERDTreeIgnore = ['\.pyc$', '\.rdb$','\.egg-info', 'dist', 'target']
 let NERDTreeQuitOnOpen = 1
+let NERDTreeShowHidden = 1
+let NERDTreeDirArrows = 0
 
 " Rainbow Parentheses
 
