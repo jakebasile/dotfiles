@@ -32,9 +32,9 @@ function get_branch() {
 # this calls tree, ignoring the target directory if it sees a project.clj
 function tree() {
   if [[ -a project.clj ]]; then
-      /usr/bin/tree -phFI target --du $@ | less -FX
+      env tree -phFI target --du $@ | less -FX
   else
-      /usr/bin/tree -phF --du $@ | less -FX
+      env tree -phF --du $@ | less -FX
   fi
 }
 
@@ -99,14 +99,19 @@ source ~/.path
 
 export EDITOR='vim'
 export LANG=en_US.UTF-8
-export GPG_TTY=$(tty)
+export GPG_TTY=`tty`
 
 # Aliases
 
-alias pbcopy='xclip -in -sel clip'
-alias pbpaste='xclip -out -sel clip'
+if [[ `uname -s` != "Darwin" ]]; then
+  alias rm=trash
+  alias pbcopy='xclip -in -sel clip'
+  alias pbpaste='xclip -out -sel clip'
+  alias top='htop' # htop > top
+else
+  alias top='sudo htop'
+fi
 alias ls='ls -lhFG' la='ls -lahFG' # Verbose LS
-alias top='htop' # htop > top
 alias t='tmux -2 new-session -ADs'
 alias tls='tmux list-sessions'
 alias tcopy='tmux save-buffer - | pbcopy'
@@ -114,11 +119,9 @@ alias tpaste='pbpaste | tmux load-buffer -'
 alias xmlformat="xmllint --format -"
 alias pbxml="pbpaste | xmlformat"
 alias jdate='date -ud "+1 year" +"\"%Y-%m-%dT%H:%M:%SZ\""'
-alias rm=trash
 alias gpg=gpg2
 
 # Misc
 
 bindkey "^R" history-incremental-search-backward
-
 
