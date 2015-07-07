@@ -4,7 +4,7 @@
     name = Jake Basile
     email = jake@jakebasile.com
 [core]
-    excludesfile = /home/jake/.gitignore_global
+    excludesfile = ~/.gitignore_global
     editor = vim -f
 [mergetool "vimdiff"]
     cmd = /usr/local/bin/vimdiff -fo "$REMOTE" "$MERGED" "$LOCAL"
@@ -36,7 +36,7 @@
 [pretty]
     theone=format:%C(yellow)%h %Cblue%an <%ae> %Cgreen%cr%Cred%d%n%s%n
 [alias]
-    prune = !git remote | xargs -n 1 git remote prune 
+    pr = !git remote | xargs -n 1 git remote prune 
     serve = !git daemon --reuseaddr --verbose  --base-path=. --export-all ./.git
     slog = log --graph --format=theone
     slag = log --graph --format=theone --all

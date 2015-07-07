@@ -39,7 +39,11 @@ function tree() {
 }
 
 function ppedn() {
-  local tmp=$(mktemp -p /tmp "ppedn-XXXXXXXX.clj")
+  if [[ `uname -s` != "Darwin" ]]; then
+    local tmp=$(mktemp -p /tmp "ppedn-XXXXXXXX.clj")
+  else
+    local tmp=$(mktemp "/tmp/ppedn.clj.XXXXXXXX")
+  fi
   echo "(require '[puget.printer :as puget])" >> $tmp
   if [[ ! -z $1 ]]; then
     # if given direct input, use that
