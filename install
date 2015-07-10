@@ -1,12 +1,13 @@
 #!/usr/bin/env zsh
 
-for source_file in $( find files -type f ); do
-    dest_file=$HOME/`echo $source_file | sed "s/files\//./"`
+for relative_source_file in $( find files -type f ); do
+    source_file=$(readlink -f $relative_source_file)
+    dest_file=$HOME/`echo $relative_source_file | sed "s/files\//./"`
     if [[ -e $dest_file ]]; then
         echo "$dest_file already exists. Skipping."
     else
-        echo "ln $source_file $dest_file"
-        ln $source_file $dest_file
+        echo "ln -s $source_file $dest_file"
+        ln -s $source_file $dest_file
     fi
 done
 
