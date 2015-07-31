@@ -80,6 +80,24 @@ function calc() {
   bc -l <<< "$@"
 }
 
+# this makes tmux a bit easier to work with for my usage. with no arguments,
+# it lists all open sessions with the current one highlighted (if you are in one).
+# With an argument it creates a new session.
+
+function t() {
+  if [[ $# = 0 ]]; then
+    if [[ -n $TMUX ]]; then
+      local this_session=$(tmux display-message -p "#S")
+      echo "$this_session (current)"
+      tmux list-session -F '#S' | grep -v $this_session
+    else
+      tmux list-session -F '#S'
+    fi
+  else
+    tmux -2 new-session -ADs $1
+  fi
+}
+
 # Completion
 
 autoload -Uz compinit
@@ -116,7 +134,6 @@ else
   alias top='sudo htop'
 fi
 alias ls='ls -lhFG' la='ls -lahFG' # Verbose LS
-alias t='tmux -2 new-session -ADs'
 alias tls='tmux list-sessions'
 alias tcopy='tmux save-buffer - | pbcopy'
 alias tpaste='pbpaste | tmux load-buffer -'
