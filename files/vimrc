@@ -113,9 +113,6 @@ au Syntax * RainbowParenthesesLoadBraces
 
 " Bindings
 
-au FileType clojure noremap rr :Require<CR>
-au FileType clojure noremap rt :Require:RunTests<CR>
-
 map <C-s> :set spell! spelllang=en_us<CR>
 map <C-t> :NERDTreeTabsToggle<CR>
 map <C-d> :TagbarToggle<CR>

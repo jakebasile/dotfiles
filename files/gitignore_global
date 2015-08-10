@@ -9,3 +9,4 @@ env/
 # temp certs and keys from ssltunnel
 cert
 key
+datomic.license
