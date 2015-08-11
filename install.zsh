@@ -21,9 +21,8 @@ done
 mkdir -p ~/.vim/{autoload,bundle}
 curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
 
-for vim_plugin in $( cat vim-plugins ); do
+for vim_plugin in $( cat vim-plugins.txt ); do
   cd ~/.vim/bundle
   git clone $vim_plugin
 done
-  
 

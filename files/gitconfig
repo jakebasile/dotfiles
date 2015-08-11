@@ -1,5 +1,4 @@
 # Jake Basile's .gitconfig
-#
 [user]
     name = Jake Basile
     email = jake@jakebasile.com
@@ -52,3 +51,4 @@
 [push]
     default = upstream
 
+# vi: ft=gitconfig

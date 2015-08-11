@@ -133,3 +133,5 @@ nmap <A-9> 9gt
 map <C-i> :IndentGuidesToggle<CR>
 nnoremap <Space> @q
 
+"vi: ft=vim
+
