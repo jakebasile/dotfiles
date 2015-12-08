@@ -133,6 +133,8 @@ if [[ `uname -s` != "Darwin" ]]; then
   alias top='htop' # htop > top
 else
   alias top='sudo htop'
+  alias dock='docker-machine start default && eval "$(docker-machine env default)"'
+  alias undock='docker-machine stop default'
 fi
 alias ls='ls -lhFG' la='ls -lahFG' # Verbose LS
 alias tls='tmux list-sessions'
