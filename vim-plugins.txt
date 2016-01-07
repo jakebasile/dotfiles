@@ -12,4 +12,5 @@ git@github.com:jistr/vim-nerdtree-tabs.git
 git@github.com:tpope/vim-projectionist.git
 git@github.com:kien/rainbow_parentheses.vim.git
 git@github.com:tpope/vim-surround.git
+git@github.com:guns/vim-clojure-static.git
 
