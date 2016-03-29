@@ -48,6 +48,40 @@ function ppedn() {
   echo "(require '[puget.printer :as puget])" >> $tmp
   if [[ ! -z $1 ]]; then
     # if given direct input, use that
+    echo "(puget/pprint '$1)" >> $tmp
+  else
+    # if nothing was given directly, use stdin
+    echo "(puget/pprint '$(cat))" >> $tmp
+  fi
+  lein with-profile ppedn run -m clojure.main $tmp 2> /dev/null
+}
+
+function hpedn() {
+  if [[ `uname -s` != "Darwin" ]]; then
+    local tmp=$(mktemp -p /tmp "ppedn-XXXXXXXX.clj")
+  else
+    local tmp=$(mktemp "/tmp/ppedn.clj.XXXXXXXX")
+  fi
+  echo "(require '[puget.printer :as puget])" >> $tmp
+  if [[ ! -z $1 ]]; then
+    # if given direct input, use that
+    echo "(puget/cprint '$1 {:color-markup :html-inline})" >> $tmp
+  else
+    # if nothing was given directly, use stdin
+    echo "(puget/cprint '$(cat) {:color-markup :html-inline})" >> $tmp
+  fi
+  lein with-profile ppedn run -m clojure.main $tmp 2> /dev/null
+}
+
+function cpedn() {
+  if [[ `uname -s` != "Darwin" ]]; then
+    local tmp=$(mktemp -p /tmp "ppedn-XXXXXXXX.clj")
+  else
+    local tmp=$(mktemp "/tmp/ppedn.clj.XXXXXXXX")
+  fi
+  echo "(require '[puget.printer :as puget])" >> $tmp
+  if [[ ! -z $1 ]]; then
+    # if given direct input, use that
     echo "(puget/cprint '$1)" >> $tmp
   else
     # if nothing was given directly, use stdin
@@ -132,7 +166,7 @@ if [[ `uname -s` != "Darwin" ]]; then
   alias top='htop' # htop > top
 else
   alias top='sudo htop'
-  alias dock='docker-machine start default; eval "$(docker-machine env default)"'
+  alias dock='docker-machine start default; sleep 2; eval "$(docker-machine env default)"'
   alias undock='docker-machine stop default'
 fi
 alias rm=trash

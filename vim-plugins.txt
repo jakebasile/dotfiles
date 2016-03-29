@@ -15,4 +15,5 @@ git@github.com:tpope/vim-surround.git
 git@github.com:guns/vim-clojure-static.git
 git@github.com:ekalinin/Dockerfile.vim.git
 git@github.com:fatih/vim-go.git
-
+git@github.com:exu/pgsql.vim.git
+git@github.com:vim-airline/vim-airline-themes.git

@@ -59,6 +59,8 @@ autocmd FileType yaml setlocal shiftwidth=2
 autocmd FileType yaml setlocal tabstop=2
 autocmd FileType yaml setlocal softtabstop=2
 
+let g:sql_type_default = 'pgsql'
+
 " Make backup directory less annoying
 
 set directory=~/.vimbackups//
