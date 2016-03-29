@@ -169,7 +169,6 @@ else
   alias dock='docker-machine start default; sleep 2; eval "$(docker-machine env default)"'
   alias undock='docker-machine stop default'
 fi
-alias rm=trash
 alias ls='ls -lhFG' la='ls -lahFG' # Verbose LS
 alias tls='tmux list-sessions'
 alias tcopy='tmux save-buffer - | pbcopy'
