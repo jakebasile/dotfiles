@@ -17,3 +17,6 @@ git@github.com:ekalinin/Dockerfile.vim.git
 git@github.com:fatih/vim-go.git
 git@github.com:exu/pgsql.vim.git
 git@github.com:vim-airline/vim-airline-themes.git
+git@github.com:derekwyatt/vim-scala.git
+git@github.com:udalov/kotlin-vim.git
+
