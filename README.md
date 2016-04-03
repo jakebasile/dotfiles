@@ -5,8 +5,9 @@ These are my dotfiles. I like them.
 ## Installation
 
 ```bash
-$ git clone git@github.com:jakebasile/dotfiles.git
-$ cd dotfiles
-$ ./install.zsh
+git clone git@github.com:jakebasile/dotfiles.git
+cd dotfiles
+./setup.zsh
+./install.zsh
 ```
 
