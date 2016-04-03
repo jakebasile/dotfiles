@@ -8,6 +8,5 @@ These are my dotfiles. I like them.
 git clone git@github.com:jakebasile/dotfiles.git
 cd dotfiles
 ./setup.zsh
-./install.zsh
 ```
 
