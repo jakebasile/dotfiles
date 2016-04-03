@@ -15,7 +15,9 @@ else
   if [[ $( sudo whoami ) != 'root' ]]; then
     echo "Need sudo access."
   else
-    sudo apt-get -y install $( paste -sd ' ' apt-installs.txt )
+    sudo apt-get -y update
+    sudo apt-get -y upgrade
+    sudo apt-get -y install $( paste -sd ' ' conf/apt-installs.txt )
   fi
 fi
 
@@ -40,7 +42,7 @@ done
 mkdir -p ~/.vim/{autoload,bundle}
 curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
 
-for vim_plugin in $( cat vim-plugins.txt ); do
+for vim_plugin in $( cat conf/vim-plugins.txt ); do
   cd ~/.vim/bundle
   git clone $vim_plugin
 done
