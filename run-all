@@ -1,0 +1,10 @@
+#!/usr/bin/env zsh
+# sets up a machine as I like it
+
+scripts/apt.zsh
+scripts/vim.zsh
+scripts/dotfiles.zsh
+scripts/clojure.zsh
+scripts/go.zsh
+scripts/scala.zsh
+

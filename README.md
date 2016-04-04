@@ -7,6 +7,6 @@ These are my dotfiles. I like them.
 ```bash
 git clone git@github.com:jakebasile/dotfiles.git
 cd dotfiles
-./setup
+./run-all
 ```
 
