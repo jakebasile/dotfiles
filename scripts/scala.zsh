@@ -14,5 +14,7 @@ sudo mv activator-dist-$version /usr/local/activator/
 # no
 sudo rm /usr/local/activator/bin/activator.bat
 
-echo "export PATH=$PATH:/usr/local/activator/bin" >> ~/.path
+echo '
+# Scala
+export PATH=$PATH:/usr/local/activator/bin' >> ~/.path
 

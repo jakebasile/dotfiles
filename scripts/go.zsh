@@ -9,12 +9,15 @@ fi
 if [[ `uname -s` = "Darwin" ]]; then
   curl -o go.tgz https://storage.googleapis.com/golang/go$version.darwin-amd64.pkg
 elif [[ `uname -s` = "Linux" ]]; then
-  curl -o go.tgz https://storage.googleapis.com/golang/go$version.linux-amd64.pkg
+  curl -o go.tgz https://storage.googleapis.com/golang/go$version.linux-amd64.tar.gz
 fi
 
 sudo tar -C /usr/local -xzf go.tgz
 rm go.tgz
 
-echo 'export GOPATH=/usr/local/go
-export PATH=$PATH:$GOPATH/bin
-export GOROOT=$HOME/go' >> ~/.path
+echo '
+# Golang
+export GOROOT=/usr/local/go
+export GOPATH=$HOME/go
+export PATH=$PATH:$GOPATH/bin:$GOROOT/bin
+' >> ~/.path
