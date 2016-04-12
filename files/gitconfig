@@ -2,6 +2,7 @@
 [user]
     name = Jake Basile
     email = jake@jakebasile.com
+	signingkey = BE570F54
 [core]
     excludesfile = ~/.gitignore_global
     editor = vim -f
@@ -33,7 +34,7 @@
     changed = green
     untracked = cyan
 [pretty]
-    theone=format:%C(yellow)%h %Cblue%an <%ae> %Cgreen%cr%Cred%d%n%s%n
+    theone=format:%C(yellow)%h %Cblue%an <%ae> %C(white)(%G?) %Cgreen%cr%Cred%d%n%s%n
 [alias]
     pr = !git remote | xargs -n 1 git remote prune 
     serve = !git daemon --reuseaddr --verbose  --base-path=. --export-all ./.git
