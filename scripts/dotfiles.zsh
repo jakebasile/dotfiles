@@ -7,6 +7,8 @@ if [[ `uname -s` = "Darwin" ]]; then
   alias readlink=/usr/local/bin/greadlink
 fi
 
+mkdir ~/.lein
+
 # link dotfiles
 for relative_source_file in $( find files -type f ); do
   source_file=$(readlink -f $relative_source_file)
