@@ -59,8 +59,6 @@ autocmd FileType yaml setlocal shiftwidth=2
 autocmd FileType yaml setlocal tabstop=2
 autocmd FileType yaml setlocal softtabstop=2
 
-let g:sql_type_default = 'pgsql'
-
 " Make backup directory less annoying
 
 set directory=~/.vimbackups//
@@ -68,6 +66,7 @@ set backupdir=~/.vimbackups//
 
 " Misc
 
+set cpt-=t
 set nocompatible
 set autoread
 set laststatus=2
@@ -86,6 +85,12 @@ set scrolloff=5
 set wildignore+=*.pyc,.git/*
 set nohlsearch
 set noshowmode
+
+" SQL
+let g:sql_type_default = 'pgsql'
+
+" Go
+let g:go_def_mapping_enabled=0
 
 " GUI Options
 
@@ -114,7 +119,6 @@ au Syntax * RainbowParenthesesLoadSquare
 au Syntax * RainbowParenthesesLoadBraces
 
 " Bindings
-
 map <C-s> :set spell! spelllang=en_us<CR>
 map <C-t> :NERDTreeTabsToggle<CR>
 map <C-d> :TagbarToggle<CR>
