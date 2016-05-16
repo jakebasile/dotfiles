@@ -8,6 +8,7 @@ if [[ `uname -s` = "Darwin" ]]; then
 fi
 
 mkdir ~/.lein
+mkdir ~/.devilspie
 
 # link dotfiles
 for relative_source_file in $( find files -type f ); do
