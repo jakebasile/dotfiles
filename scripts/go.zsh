@@ -1,5 +1,5 @@
 #!/usr/bin/env zsh
-local version=1.6
+local version=1.6.3
 
 if which go > /dev/null; then
   echo "Go already installed, skipping."
@@ -7,13 +7,15 @@ if which go > /dev/null; then
 fi
 
 if [[ `uname -s` = "Darwin" ]]; then
-  curl -o go.tgz https://storage.googleapis.com/golang/go$version.darwin-amd64.pkg
+  curl -o go.pkg https://storage.googleapis.com/golang/go$version.darwin-amd64.pkg
+  sudo installer -pkg go.pkg -target /
+  rm go.pkg
 elif [[ `uname -s` = "Linux" ]]; then
   curl -o go.tgz https://storage.googleapis.com/golang/go$version.linux-amd64.tar.gz
+  sudo tar -C /usr/local -xzf go.tgz
+  rm go.tgz
 fi
 
-sudo tar -C /usr/local -xzf go.tgz
-rm go.tgz
 
 echo '
 # Golang
