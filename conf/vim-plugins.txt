@@ -1,7 +1,5 @@
 git@github.com:bling/vim-airline.git
-git@github.com:derekwyatt/vim-scala.git
 git@github.com:ekalinin/Dockerfile.vim.git
-git@github.com:elixir-lang/vim-elixir.git
 git@github.com:exu/pgsql.vim.git
 git@github.com:fatih/vim-go.git
 git@github.com:guns/vim-clojure-static.git
@@ -18,6 +16,5 @@ git@github.com:tpope/vim-fugitive.git
 git@github.com:tpope/vim-projectionist.git
 git@github.com:tpope/vim-salve.git
 git@github.com:tpope/vim-surround.git
-git@github.com:udalov/kotlin-vim.git
 git@github.com:vim-airline/vim-airline-themes.git
 git@github.com:cespare/vim-toml.git

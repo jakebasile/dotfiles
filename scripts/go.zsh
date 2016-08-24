@@ -1,7 +1,7 @@
 #!/usr/bin/env zsh
-local version=1.6.3
+local version=1.7
 
-if which go > /dev/null; then
+if which go > /dev/null && go version | grep -q $version; then
   echo "Go already installed, skipping."
   exit
 fi

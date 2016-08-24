@@ -7,6 +7,6 @@ These are my dotfiles. I like them.
 ```bash
 git clone git@github.com:jakebasile/dotfiles.git
 cd dotfiles
-./run-all
+./run-all-$( uname -v | grep -q 'Darwin' && echo 'mac' || echo 'ubuntu')
 ```
 
