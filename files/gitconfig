@@ -41,6 +41,7 @@
     slog = log --graph --format=theone
     slag = log --graph --format=theone --all
     stat = diff --stat
+    cstat = diff --cached --stat
     st = status
     co = checkout
     br = branch
