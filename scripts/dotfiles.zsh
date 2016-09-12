@@ -8,6 +8,7 @@ if [[ `uname -s` = "Darwin" ]]; then
 fi
 
 mkdir ~/.lein
+mkdir ~/.atom
 
 # link dotfiles
 for relative_source_file in $( find files -type f ); do
@@ -20,4 +21,3 @@ for relative_source_file in $( find files -type f ); do
       ln -s $source_file $dest_file
   fi
 done
-

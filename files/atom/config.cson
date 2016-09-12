@@ -1,0 +1,33 @@
+"*":
+  core:
+    customFileTypes:
+      "source.ini": [
+        ".buckconfig"
+        ".flowconfig"
+      ]
+      "source.json": [
+        ".arcconfig"
+        "BUCK.autodeps"
+      ]
+      "source.python": [
+        "BUCK"
+      ]
+    disabledPackages: [
+      "tree-view"
+    ]
+    openEmptyEditorOnStart: false
+    themes: [
+      "one-dark-ui"
+      "zenburn-prime-syntax"
+    ]
+  editor:
+    fontFamily: "Source Code Pro"
+  "exception-reporting":
+    userId: "0dacece5-6c28-aa5c-7949-423cff26188c"
+  nuclide:
+    "nuclide-code-format":
+      formatOnSave: true
+    "nuclide-format-js": {}
+    "nuclide-home": {}
+  welcome:
+    showOnStartup: false
