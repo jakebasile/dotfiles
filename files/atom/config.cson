@@ -4,6 +4,7 @@
       "source.ini": [
         ".buckconfig"
         ".flowconfig"
+        ".hgrc"
       ]
       "source.json": [
         ".arcconfig"
@@ -14,20 +15,22 @@
       ]
     disabledPackages: [
       "tree-view"
+      "tool-bar"
     ]
     openEmptyEditorOnStart: false
-    themes: [
-      "one-dark-ui"
-      "zenburn-prime-syntax"
-    ]
   editor:
     fontFamily: "Source Code Pro"
+    showIndentGuide: true
   "exception-reporting":
     userId: "0dacece5-6c28-aa5c-7949-423cff26188c"
   nuclide:
+    installRecommendedPackages: true
     "nuclide-code-format":
       formatOnSave: true
     "nuclide-format-js": {}
-    "nuclide-home": {}
+    "nuclide-home":
+      showHome: false
+  "terminal-plus":
+    core: {}
   welcome:
     showOnStartup: false
