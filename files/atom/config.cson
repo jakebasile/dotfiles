@@ -20,7 +20,11 @@
     openEmptyEditorOnStart: false
   editor:
     fontFamily: "Source Code Pro"
+    preferredLineLength: 90
+    scrollPastEnd: true
     showIndentGuide: true
+    softWrap: true
+    softWrapAtPreferredLineLength: true
   "exception-reporting":
     userId: "0dacece5-6c28-aa5c-7949-423cff26188c"
   nuclide:
@@ -34,3 +38,16 @@
     core: {}
   welcome:
     showOnStartup: false
+".ansi.text":
+  editor:
+    preferredLineLength: 9
+    scrollPastEnd: false
+".hack.html.text":
+  editor:
+    preferredLineLength: 9
+".hackfragment.source":
+  editor:
+    preferredLineLength: 9
+".hg-commit.text":
+  editor:
+    preferredLineLength: 9
