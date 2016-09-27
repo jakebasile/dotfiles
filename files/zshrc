@@ -143,12 +143,8 @@ zstyle ':completion:*' max-errors 3
 
 # Prompts
 
-PROMPT='%m:%{%F{cyan}%}%1~%{%f%}$(get_branch) %{%F{white}%}%D{%L:%M:%S} %(!.%{%F{red}%}#%{%f%}.%{%F{green}%}$%{%f%}) '
-SPROMPT='%{%F{red}%}%R%{%f%} -> %{%F{blue}%}%r%{%f%} (y, n, a, e)'
-TMOUT=1
-TRAPALRM() {
-  zle reset-prompt
-}
+export PROMPT='%m:%{%F{cyan}%}%1~%{%f%}$(get_branch) %(!.%{%F{red}%}#%{%f%}.%{%F{green}%}$%{%f%}) '
+export SPROMPT='%{%F{red}%}%R%{%f%} -> %{%F{blue}%}%r%{%f%} (y, n, a, e)'
 
 # Environment
 
@@ -185,4 +181,3 @@ alias gpg=gpg2
 # Misc
 
 bindkey "^R" history-incremental-search-backward
-
