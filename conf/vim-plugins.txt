@@ -19,3 +19,4 @@ git@github.com:tpope/vim-surround.git
 git@github.com:vim-airline/vim-airline-themes.git
 git@github.com:cespare/vim-toml.git
 git@github.com:flowtype/vim-flow.git
+git@github.com:gosukiwi/vim-atom-dark.git

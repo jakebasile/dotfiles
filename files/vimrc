@@ -29,7 +29,7 @@ let g:airline_theme="zenburn"
 let g:airline#exenstions#tagbar#enabled=1
 set background=dark
 set t_Co=256
-color zenburn
+color atom-dark-256
 set t_ut=
 
 " Filetypes
