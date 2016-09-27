@@ -154,7 +154,11 @@ TRAPALRM() {
 
 source ~/.path
 
-export EDITOR='vim'
+if [[ $(uname -s) == "Darwin" ]]; then
+  export EDITOR='atom'
+else
+  export EDITOR='vim'
+fi
 export LANG=en_US.UTF-8
 export GPG_TTY=`tty`
 
