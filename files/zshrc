@@ -168,6 +168,7 @@ else
   alias top='sudo htop'
   alias dock='docker-machine start default; sleep 2; eval "$(docker-machine env default)"'
   alias undock='docker-machine stop default'
+  alias atom='open -a "Atom"'
 fi
 alias ls='ls -lhFG' la='ls -lahFG' # Verbose LS
 alias tls='tmux list-sessions'
