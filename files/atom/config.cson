@@ -1,4 +1,5 @@
 "*":
+  "bracket-matcher": {}
   core:
     customFileTypes:
       "source.ini": [
@@ -23,17 +24,19 @@
     preferredLineLength: 90
     scrollPastEnd: true
     showIndentGuide: true
-    softWrap: true
-    softWrapAtPreferredLineLength: true
   "exception-reporting":
     userId: "0dacece5-6c28-aa5c-7949-423cff26188c"
   nuclide:
     installRecommendedPackages: true
     "nuclide-code-format":
       formatOnSave: true
+    "nuclide-distraction-free-mode": {}
     "nuclide-format-js": {}
+    "nuclide-health": {}
     "nuclide-home":
       showHome: false
+    "nuclide-working-sets": {}
+    use: {}
   "terminal-plus":
     core: {}
   welcome:
@@ -42,6 +45,8 @@
   editor:
     preferredLineLength: 9
     scrollPastEnd: false
+    softWrap: false
+    softWrapAtPreferredLineLength: false
 ".hack.html.text":
   editor:
     preferredLineLength: 9
