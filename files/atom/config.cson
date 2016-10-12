@@ -19,6 +19,7 @@
       "tool-bar"
     ]
     openEmptyEditorOnStart: false
+    telemetryConsent: "no"
   editor:
     fontFamily: "Source Code Pro"
     preferredLineLength: 90
