@@ -115,6 +115,10 @@ function calc() {
   bc -l <<< "$@"
 }
 
+function yarn() {
+  command yarn "$@" --no-emoji
+}
+
 # this makes tmux a bit easier to work with for my usage. with no arguments,
 # it lists all open sessions with the current one highlighted (if you are in one).
 # With an argument it creates a new session.

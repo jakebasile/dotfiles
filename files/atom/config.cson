@@ -15,8 +15,8 @@
         "BUCK"
       ]
     disabledPackages: [
-      "tree-view"
       "tool-bar"
+      "tree-view"
     ]
     openEmptyEditorOnStart: false
     telemetryConsent: "no"
