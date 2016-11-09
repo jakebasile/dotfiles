@@ -29,7 +29,7 @@ let g:airline_theme="zenburn"
 let g:airline#exenstions#tagbar#enabled=1
 set background=dark
 set t_Co=256
-color atom-dark-256
+color zenburn
 set t_ut=
 
 " Filetypes
@@ -92,6 +92,12 @@ let g:sql_type_default = 'pgsql'
 " Go
 let g:go_def_mapping_enabled=0
 
+" JSX
+let g:jsx_ext_required = 0
+
+" Flow
+let g:javascript_plugin_flow = 1
+
 " GUI Options
 
 set guifont=Roboto\ Mono\ Regular\ 11
@@ -99,6 +105,9 @@ set guioptions=egmt
 set guioptions-=rl
 set guioptions-=RL
 set mouse=
+
+" closetag
+let g:closetag_filenames = "*.html,*.js"
 
 " Tagbar
 

@@ -18,5 +18,7 @@ git@github.com:tpope/vim-salve.git
 git@github.com:tpope/vim-surround.git
 git@github.com:vim-airline/vim-airline-themes.git
 git@github.com:cespare/vim-toml.git
-git@github.com:flowtype/vim-flow.git
-git@github.com:gosukiwi/vim-atom-dark.git
+git@github.com:pangloss/vim-javascript.git
+git@github.com:mxw/vim-jsx.git
+git@github.com:alvan/vim-closetag.git
+git://github.com/jiangmiao/auto-pairs.git
