@@ -29,21 +29,40 @@
     userId: "0dacece5-6c28-aa5c-7949-423cff26188c"
   nuclide:
     installRecommendedPackages: true
-    "nuclide-code-format":
-      formatOnSave: true
+    "nuclide-code-format": {}
+    "nuclide-datatip": {}
     "nuclide-distraction-free-mode": {}
+    "nuclide-file-tree":
+      showOpenFiles: false
+      showUncommittedChanges: false
+    "nuclide-flow": {}
     "nuclide-format-js": {}
     "nuclide-health": {}
     "nuclide-home":
       showHome: false
     "nuclide-working-sets": {}
-    use: {}
+    use:
+      "nuclide-adb-logcat": false
+      "nuclide-arcanist": false
+      "nuclide-buck": false
+      "nuclide-clang": false
+      "nuclide-debugger": false
+      "nuclide-hg-conflict-resolver": false
+      "nuclide-hg-repository": false
+      "nuclide-ios-simulator-logs": false
+      "nuclide-objc": false
+      "nuclide-ocaml": false
+      "nuclide-remote-atom": false
+      "nuclide-remote-projects": false
+      "nuclide-swift": false
+      "nuclide-working-sets": false
   "terminal-plus":
     core: {}
   welcome:
     showOnStartup: false
 ".ansi.text":
   editor:
+    autoIndent: true
     preferredLineLength: 9
     scrollPastEnd: false
     softWrap: false
@@ -57,3 +76,10 @@
 ".hg-commit.text":
   editor:
     preferredLineLength: 9
+".hover.reason.source.type":
+  editor:
+    autoIndent: true
+    preferredLineLength: 110
+".reason.source":
+  editor:
+    preferredLineLength: 110
