@@ -6,6 +6,7 @@ if which xelatex > /dev/null; then
 fi
 
 curl -o tex.pkg http://tug.org/cgi-bin/mactex-download/MacTeX.pkg
-sudo installed -pkg tex.pkg -target /
+sudo installer -pkg tex.pkg -target /
+
 rm tex.pkg
 

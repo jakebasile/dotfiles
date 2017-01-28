@@ -23,4 +23,6 @@ vim
 wget
 xz
 zsh
+nodejs
+yarn
 

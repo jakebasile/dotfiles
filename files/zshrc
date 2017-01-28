@@ -161,6 +161,7 @@ else
 fi
 export LANG=en_US.UTF-8
 export GPG_TTY=`tty`
+export HOMEBREW_NO_EMOJI=1
 
 # Aliases
 
