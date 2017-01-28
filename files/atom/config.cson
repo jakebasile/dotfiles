@@ -17,6 +17,7 @@
     disabledPackages: [
       "tool-bar"
       "tree-view"
+      "deprecation-cop"
     ]
     openEmptyEditorOnStart: false
     telemetryConsent: "no"

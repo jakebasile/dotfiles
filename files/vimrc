@@ -25,11 +25,11 @@ filetype indent plugin on
 
 " Colors
 
-let g:airline_theme="zenburn"
+let g:airline_theme="onedark"
 let g:airline#exenstions#tagbar#enabled=1
 set background=dark
 set t_Co=256
-color zenburn
+color onedark
 set t_ut=
 
 " Filetypes
@@ -100,7 +100,7 @@ let g:javascript_plugin_flow = 1
 
 " GUI Options
 
-set guifont=Roboto\ Mono\ Regular\ 11
+set guifont=Source\ Code\ Pro:h14
 set guioptions=egmt
 set guioptions-=rl
 set guioptions-=RL
