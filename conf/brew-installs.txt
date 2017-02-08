@@ -12,6 +12,7 @@ htop
 jq
 mercurial
 mongodb
+nodejs
 openssl
 postgresql
 python
@@ -24,4 +25,5 @@ tree
 vim
 wget
 xz
+yarn
 zsh

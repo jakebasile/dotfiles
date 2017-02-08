@@ -5,6 +5,7 @@ git@github.com:exu/pgsql.vim.git
 git@github.com:guns/vim-clojure-static.git
 git@github.com:jiangmiao/auto-pairs.git
 git@github.com:jistr/vim-nerdtree-tabs.git
+git@github.com:joshdick/onedark.vim.git
 git@github.com:kien/rainbow_parentheses.vim.git
 git@github.com:majutsushi/tagbar.git
 git@github.com:nathanaelkane/vim-indent-guides.git
