@@ -15,7 +15,9 @@ mongodb
 openssl
 postgresql
 python
+python3
 redis
+rlwrap
 ruby
 tmux
 tree
@@ -23,4 +25,3 @@ vim
 wget
 xz
 zsh
-
