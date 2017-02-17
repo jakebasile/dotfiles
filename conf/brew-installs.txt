@@ -4,6 +4,8 @@ cloc
 coreutils
 cowsay
 ctags
+elixir
+erlang
 fortune
 gawk
 gdbm
@@ -14,6 +16,7 @@ mercurial
 mongodb
 nodejs
 openssl
+planck
 postgresql
 python
 python3

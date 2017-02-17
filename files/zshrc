@@ -40,20 +40,9 @@ function tree() {
 }
 
 function ppedn() {
-  if [[ `uname -s` != "Darwin" ]]; then
-    local tmp=$(mktemp -p /tmp "ppedn-XXXXXXXX.clj")
-  else
-    local tmp=$(mktemp "/tmp/ppedn.clj.XXXXXXXX")
-  fi
-  echo "(require '[puget.printer :as puget])" >> $tmp
-  if [[ ! -z $1 ]]; then
-    # if given direct input, use that
-    echo "(puget/pprint '$1)" >> $tmp
-  else
-    # if nothing was given directly, use stdin
-    echo "(puget/pprint '$(cat))" >> $tmp
-  fi
-  lein with-profile ppedn run -m clojure.main $tmp 2> /dev/null
+  planck \
+    -e"(require 'planck.pprint.data 'planck.themes 'cljs.tools.reader 'planck.core)" \
+    -e'(-> (planck.core/slurp planck.core/*in*) cljs.tools.reader/read-string (planck.pprint.data/pprint {:width 70 :theme (planck.themes/get-theme :light)}))'
 }
 
 function hpedn() {
