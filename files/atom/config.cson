@@ -1,4 +1,7 @@
 "*":
+  "atom-beautify":
+    general:
+      _analyticsUserId: "ca3b458a-9279-4470-91ff-ab6f2bfeba74"
   "bracket-matcher": {}
   core:
     customFileTypes:
@@ -15,17 +18,15 @@
         "BUCK"
       ]
     disabledPackages: [
-      "tool-bar"
-      "tree-view"
       "deprecation-cop"
     ]
     openEmptyEditorOnStart: false
     telemetryConsent: "no"
   editor:
     fontFamily: "Source Code Pro"
+    invisibles: {}
     preferredLineLength: 90
     scrollPastEnd: true
-    showIndentGuide: true
   "exception-reporting":
     userId: "0dacece5-6c28-aa5c-7949-423cff26188c"
   nuclide:
@@ -57,8 +58,12 @@
       "nuclide-remote-projects": false
       "nuclide-swift": false
       "nuclide-working-sets": false
+  "one-dark-ui": {}
   "terminal-plus":
     core: {}
+  "tree-view":
+    hideIgnoredNames: true
+    squashDirectoryNames: true
   welcome:
     showOnStartup: false
 ".ansi.text":
