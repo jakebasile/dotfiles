@@ -16,6 +16,7 @@
       "‹›"
     ]
   core:
+    closeDeletedFileTabs: true
     customFileTypes:
       "source.ini": [
         ".buckconfig"
@@ -32,15 +33,32 @@
     disabledPackages: [
       "deprecation-cop"
     ]
+    ignoredNames: [
+      ".git"
+      ".hg"
+      ".svn"
+      ".DS_Store"
+      "._*"
+      "Thumbs.db"
+      "desktop.ini"
+      ".mongo*"
+      "target*"
+    ]
     openEmptyEditorOnStart: true
     packagesWithKeymapsDisabled: []
     telemetryConsent: "no"
+    themes: [
+      "nord-atom-ui"
+      "nord-atom-syntax"
+    ]
   editor:
     autoIndentOnPaste: false
     fontFamily: "Source Code Pro"
     invisibles: {}
     preferredLineLength: 90
     scrollPastEnd: true
+    softWrap: true
+    softWrapAtPreferredLineLength: true
   "exception-reporting":
     userId: "0dacece5-6c28-aa5c-7949-423cff26188c"
   "lisp-paredit":
@@ -77,6 +95,7 @@
       "with-open"
     ]
     strict: false
+  "nord-atom-ui": {}
   "one-dark-ui": {}
   "proto-repl":
     autoPrettyPrint: true
