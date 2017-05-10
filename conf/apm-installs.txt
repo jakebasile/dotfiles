@@ -1,0 +1,10 @@
+Parinfer@1.17.0
+highlight-selected@0.13.1
+ink@0.6.5
+language-latex@1.0.0
+lisp-paredit@0.5.5
+proto-repl@1.4.20
+proto-repl-charts@0.4.1
+sort-lines@0.14.0
+vim-mode-plus@0.91.0
+

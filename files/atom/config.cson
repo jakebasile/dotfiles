@@ -2,7 +2,19 @@
   "atom-beautify":
     general:
       _analyticsUserId: "ca3b458a-9279-4470-91ff-ab6f2bfeba74"
-  "bracket-matcher": {}
+  "autocomplete-plus":
+    enableAutoActivation: false
+  "bracket-matcher":
+    autocompleteCharacters: [
+      "()"
+      "[]"
+      "{}"
+      "\"\""
+      "“”"
+      "‘’"
+      "«»"
+      "‹›"
+    ]
   core:
     customFileTypes:
       "source.ini": [
@@ -20,45 +32,56 @@
     disabledPackages: [
       "deprecation-cop"
     ]
-    openEmptyEditorOnStart: false
+    openEmptyEditorOnStart: true
+    packagesWithKeymapsDisabled: []
     telemetryConsent: "no"
   editor:
+    autoIndentOnPaste: false
     fontFamily: "Source Code Pro"
     invisibles: {}
     preferredLineLength: 90
     scrollPastEnd: true
   "exception-reporting":
     userId: "0dacece5-6c28-aa5c-7949-423cff26188c"
-  nuclide:
-    installRecommendedPackages: true
-    "nuclide-code-format": {}
-    "nuclide-datatip": {}
-    "nuclide-distraction-free-mode": {}
-    "nuclide-file-tree":
-      showOpenFiles: false
-      showUncommittedChanges: false
-    "nuclide-flow": {}
-    "nuclide-format-js": {}
-    "nuclide-health": {}
-    "nuclide-home":
-      showHome: false
-    "nuclide-working-sets": {}
-    use:
-      "nuclide-adb-logcat": false
-      "nuclide-arcanist": false
-      "nuclide-buck": false
-      "nuclide-clang": false
-      "nuclide-debugger": false
-      "nuclide-hg-conflict-resolver": false
-      "nuclide-hg-repository": false
-      "nuclide-ios-simulator-logs": false
-      "nuclide-objc": false
-      "nuclide-ocaml": false
-      "nuclide-remote-atom": false
-      "nuclide-remote-projects": false
-      "nuclide-swift": false
-      "nuclide-working-sets": false
+  "lisp-paredit":
+    indentationForms: [
+      "try"
+      "catch"
+      "finally"
+      "/^let/"
+      "are"
+      "/^def/"
+      "fn"
+      "cond"
+      "condp"
+      "/^if.*/"
+      "/.*\\/for/"
+      "for"
+      "for-all"
+      "/^when.*/"
+      "testing"
+      "doseq"
+      "dotimes"
+      "ns"
+      "routes"
+      "GET"
+      "POST"
+      "PUT"
+      "DELETE"
+      "extend-protocol"
+      "loop"
+      "do"
+      "case"
+      "with-bindings"
+      "checking"
+      "with-open"
+    ]
+    strict: false
   "one-dark-ui": {}
+  "proto-repl":
+    autoPrettyPrint: true
+    bootPath: "/usr/local/bin/boot"
+    leinPath: "/usr/local/bin/lein"
   "terminal-plus":
     core: {}
   "tree-view":
@@ -73,6 +96,11 @@
     scrollPastEnd: false
     softWrap: false
     softWrapAtPreferredLineLength: false
+".clojure.source":
+  editor:
+    autoIndent: false
+    autoIndentOnPaste: false
+    nonWordCharacters: "()\"':,;~@#$%^&{}[]`"
 ".hack.html.text":
   editor:
     preferredLineLength: 9
