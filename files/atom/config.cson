@@ -2,8 +2,7 @@
   "atom-beautify":
     general:
       _analyticsUserId: "ca3b458a-9279-4470-91ff-ab6f2bfeba74"
-  "autocomplete-plus":
-    enableAutoActivation: false
+  "autocomplete-plus": {}
   "bracket-matcher":
     autocompleteCharacters: [
       "()"
@@ -32,6 +31,7 @@
       ]
     disabledPackages: [
       "deprecation-cop"
+      "autocomplete-snippets"
     ]
     ignoredNames: [
       ".git"
@@ -51,6 +51,7 @@
       "nord-atom-ui"
       "nord-atom-syntax"
     ]
+    titleBar: "custom"
   editor:
     autoIndentOnPaste: false
     fontFamily: "Source Code Pro"
