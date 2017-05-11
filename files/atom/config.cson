@@ -65,6 +65,7 @@
     invisibles: {}
     preferredLineLength: 90
     scrollPastEnd: true
+    showIndentGuide: true
     softWrap: true
     softWrapAtPreferredLineLength: true
   "exception-reporting":
