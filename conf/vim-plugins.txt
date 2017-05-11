@@ -19,3 +19,4 @@ git@github.com:tpope/vim-salve.git
 git@github.com:tpope/vim-surround.git
 git@github.com:vim-airline/vim-airline-themes.git
 git@github.com:elixir-lang/vim-elixir.git
+git@github.com:arcticicestudio/nord-vim.git

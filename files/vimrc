@@ -25,12 +25,20 @@ filetype indent plugin on
 
 " Colors
 
+if (has("nvim"))
+  let $NVIM_TUI_ENABLE_TRUE_COLOR=1
+endif
+
+if (has("termguicolors"))
+  set termguicolors
+endif
+
+"set t_Co=256
+color nord
+let g:onedark_termcolors=16
 let g:airline_theme="onedark"
 let g:airline#exenstions#tagbar#enabled=1
-set background=dark
-set t_Co=256
-color onedark
-set t_ut=
+"set t_ut=
 
 " Filetypes
 
