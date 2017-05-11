@@ -32,6 +32,13 @@
     disabledPackages: [
       "deprecation-cop"
       "autocomplete-snippets"
+      "proto-repl"
+      "proto-repl-charts"
+      "linter"
+      "linter-ui-default"
+      "linter-write-good"
+      "intentions"
+      "busy-signal"
     ]
     ignoredNames: [
       ".git"
@@ -62,6 +69,10 @@
     softWrapAtPreferredLineLength: true
   "exception-reporting":
     userId: "0dacece5-6c28-aa5c-7949-423cff26188c"
+  "linter-ui-default":
+    showStatusBar: false
+  "linter-write-good":
+    severityLevel: "Warning"
   "lisp-paredit":
     indentationForms: [
       "try"
@@ -96,8 +107,10 @@
       "with-open"
     ]
     strict: false
+  "markdown-preview": {}
   "nord-atom-ui": {}
   "one-dark-ui": {}
+  organized: {}
   "proto-repl":
     autoPrettyPrint: true
     bootPath: "/usr/local/bin/boot"

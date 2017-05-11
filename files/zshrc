@@ -160,7 +160,7 @@ if [[ `uname -s` != "Darwin" ]]; then
   alias top='htop' # htop > top
 else
   alias top='sudo htop'
-  alias atom='open -a "Atom"'
+  alias atom='atom --disable-gpu'
 fi
 alias ls='ls -lhFG' la='ls -lahFG' # Verbose LS
 alias tls='tmux list-sessions'
