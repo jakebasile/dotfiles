@@ -28,7 +28,7 @@ module.exports = {
     termCSS: '',
 
     // custom padding (css format, i.e.: `top right bottom left`)
-    padding: '0px 10px 0px 10px',
+    padding: '10px 10px 0px 10px',
 
     // the full list. if you're going to provide the full color palette,
     // including the 6 x 6 color cubes and the grayscale map, just provide
