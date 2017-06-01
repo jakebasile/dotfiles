@@ -32,13 +32,6 @@
     disabledPackages: [
       "deprecation-cop"
       "autocomplete-snippets"
-      "proto-repl"
-      "proto-repl-charts"
-      "linter"
-      "linter-ui-default"
-      "linter-write-good"
-      "intentions"
-      "busy-signal"
     ]
     ignoredNames: [
       ".git"
@@ -115,7 +108,11 @@
   "proto-repl":
     autoPrettyPrint: true
     bootPath: "/usr/local/bin/boot"
+    displayExecutedCodeInRepl: false
+    displayHelpText: false
     leinPath: "/usr/local/bin/lein"
+    refreshOnReplStart: false
+    showInlineResults: false
   "terminal-plus":
     core: {}
   "tree-view":
