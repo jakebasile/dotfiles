@@ -1,0 +1,11 @@
+'atom-text-editor.vim-mode-plus:not(.insert-mode):not(.operator-pending-mode)':
+  'z -': 'unset!'
+  'z .': 'unset!'
+  'z b': 'proto-repl:execute-top-block'
+  'z e': 'unset!'
+  'z enter': 'unset!'
+  'z s': 'unset!'
+  'z z': 'proto-repl:load-current-file'
+  'z c': 'proto-repl:remote-nrepl-connection'
+  'z d': 'proto-repl:exit-repl'
+  'z t': 'proto-repl:run-all-tests'
