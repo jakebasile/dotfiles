@@ -33,6 +33,8 @@
     disabledPackages: [
       "deprecation-cop"
       "autocomplete-snippets"
+      "github"
+      "open-on-github"
     ]
     ignoredNames: [
       ".git"
@@ -116,7 +118,9 @@
   "terminal-plus":
     core: {}
   "tree-view":
+    autoReveal: true
     hideIgnoredNames: true
+    hideVcsIgnoredFiles: true
     squashDirectoryNames: true
   welcome:
     showOnStartup: false
