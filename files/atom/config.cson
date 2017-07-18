@@ -118,10 +118,11 @@
   "terminal-plus":
     core: {}
   "tree-view":
-    autoReveal: true
     hideIgnoredNames: true
     hideVcsIgnoredFiles: true
     squashDirectoryNames: true
+  "vim-mode-plus":
+    dontUpdateRegisterOnChangeOrSubstitute: true
   welcome:
     showOnStartup: false
 ".ansi.text":
