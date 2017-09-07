@@ -36,7 +36,7 @@ endif
 "set t_Co=256
 color nord
 let g:onedark_termcolors=16
-let g:airline_theme="onedark"
+let g:airline_theme="nord"
 let g:airline#exenstions#tagbar#enabled=1
 "set t_ut=
 
