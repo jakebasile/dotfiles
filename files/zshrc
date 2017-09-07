@@ -151,17 +151,17 @@ fi
 export LANG=en_US.UTF-8
 export GPG_TTY=`tty`
 export HOMEBREW_NO_EMOJI=1
+export COMPOSE_HTTP_TIMEOUT=86400
 
 # Aliases
 
 if [[ `uname -s` != "Darwin" ]]; then
   alias pbcopy='xclip -in -sel clip'
   alias pbpaste='xclip -out -sel clip'
-  alias top='htop' # htop > top
 else
-  alias top='sudo htop'
   alias atom='atom --disable-gpu'
 fi
+alias top='htop' # htop > top
 alias ls='ls -lhFG' la='ls -lahFG' # Verbose LS
 alias tls='tmux list-sessions'
 alias tcopy='tmux save-buffer - | pbcopy'
@@ -169,7 +169,9 @@ alias tpaste='pbpaste | tmux load-buffer -'
 alias xmlformat="xmllint --format -"
 alias pbxml="pbpaste | xmlformat"
 alias jdate='date -ud "+1 year" +"\"%Y-%m-%dT%H:%M:%SZ\""'
-alias gpg=gpg2
+
+alias compose=docker-compose
+alias machine=docker-machine
 
 # Misc
 
