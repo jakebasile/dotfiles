@@ -59,11 +59,9 @@
     autoIndentOnPaste: false
     fontFamily: "Source Code Pro"
     invisibles: {}
-    preferredLineLength: 90
     scrollPastEnd: true
     showIndentGuide: true
     softWrap: true
-    softWrapAtPreferredLineLength: true
   "exception-reporting":
     userId: "0dacece5-6c28-aa5c-7949-423cff26188c"
   "linter-ui-default":
@@ -108,6 +106,21 @@
   "nord-atom-ui": {}
   "one-dark-ui": {}
   organized: {}
+  parinfer:
+    "file-extensions": [
+      ".boot"
+      ".cl"
+      ".clj"
+      ".cljc"
+      ".cljs"
+      ".edn"
+      ".el"
+      ".lfe"
+      ".lisp"
+      ".lsp"
+      ".rkt"
+      ".scm"
+    ]
   "proto-repl":
     autoPrettyPrint: true
     bootPath: "/usr/local/bin/boot"
