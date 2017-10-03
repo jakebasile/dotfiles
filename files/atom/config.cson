@@ -33,8 +33,6 @@
     disabledPackages: [
       "deprecation-cop"
       "autocomplete-snippets"
-      "github"
-      "open-on-github"
     ]
     ignoredNames: [
       ".git"
@@ -136,6 +134,7 @@
     squashDirectoryNames: true
   "vim-mode-plus":
     dontUpdateRegisterOnChangeOrSubstitute: true
+    useClipboardAsDefaultRegister: false
   welcome:
     showOnStartup: false
 ".ansi.text":
