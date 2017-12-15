@@ -47,6 +47,7 @@
     ]
     openEmptyEditorOnStart: true
     packagesWithKeymapsDisabled: []
+    projectHome: "/Users/jakebasile/Code"
     telemetryConsent: "no"
     themes: [
       "nord-atom-ui"
@@ -130,10 +131,12 @@
     core: {}
   "tree-view":
     hideIgnoredNames: true
-    hideVcsIgnoredFiles: true
     squashDirectoryNames: true
   "vim-mode-plus":
-    dontUpdateRegisterOnChangeOrSubstitute: true
+    blackholeRegisteredOperators: [
+      "change*"
+      "substitute*"
+    ]
     useClipboardAsDefaultRegister: false
   welcome:
     showOnStartup: false
@@ -165,3 +168,6 @@
 ".reason.source":
   editor:
     preferredLineLength: 110
+".rust.source":
+  editor:
+    tabLength: 2
