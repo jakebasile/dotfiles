@@ -9,3 +9,7 @@
   'z c': 'proto-repl:remote-nrepl-connection'
   'z d': 'proto-repl:exit-repl'
   'z t': 'proto-repl:run-all-tests'
+# '.workspace':
+#   'ctrl-shift-g': 'github:toggle-git-tab-focus'
+# '.platform-darwin, .platform-win32, .platform-linux':
+#   'ctrl-g': 'unset!'

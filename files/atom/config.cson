@@ -13,7 +13,6 @@
       "“”"
       "‘’"
       "«»"
-      "‹›"
     ]
   core:
     closeDeletedFileTabs: true
@@ -54,6 +53,7 @@
       "nord-atom-syntax"
     ]
     titleBar: "custom"
+    uriHandlerRegistration: "always"
   editor:
     autoIndentOnPaste: false
     fontFamily: "Source Code Pro"
