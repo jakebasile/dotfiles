@@ -157,8 +157,8 @@ map <C-i> :IndentGuidesToggle<CR>
 nnoremap <Space> @q
 
 " UUID
-py import uuid
-nnoremap <C-U> i<C-r>=pyeval('str(uuid.uuid4())')<CR><Esc>
+" py import uuid
+" nnoremap <C-U> i<C-r>=pyeval('str(uuid.uuid4())')<CR><Esc>
 
 "vi: ft=vim
 
