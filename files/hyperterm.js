@@ -4,8 +4,7 @@ module.exports = {
     fontSize: 14,
 
     // font family with optional fallbacks
-    fontFamily: 'Source Code Pro',
-    fontWeight: 'normal',
+    fontFamily: 'IBM Plex Mono',
 
     // terminal cursor background color and opacity (hex, rgb, hsl, hsv, hwb or cmyk)
     cursorColor: 'rgba(248,28,229,0.75)',
@@ -26,7 +25,7 @@ module.exports = {
     css: '',
 
     // custom css to embed in the terminal window
-    termCSS: '',
+    termCSS: 'x-row { font-weight: 500 }',
 
     // custom padding (css format, i.e.: `top right bottom left`)
     padding: '10px 10px 0px 10px',

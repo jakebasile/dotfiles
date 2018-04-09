@@ -32,6 +32,7 @@
     disabledPackages: [
       "deprecation-cop"
       "autocomplete-snippets"
+      "linter-write-good"
     ]
     ignoredNames: [
       ".git"
@@ -56,7 +57,7 @@
     uriHandlerRegistration: "always"
   editor:
     autoIndentOnPaste: false
-    fontFamily: "Source Code Pro"
+    fontFamily: "IBM Plex Mono"
     invisibles: {}
     scrollPastEnd: true
     showIndentGuide: true
@@ -102,6 +103,8 @@
     ]
     strict: false
   "markdown-preview": {}
+  "nord-atom-syntax":
+    accessibility: {}
   "nord-atom-ui": {}
   "one-dark-ui": {}
   organized: {}
@@ -131,6 +134,7 @@
     core: {}
   "tree-view":
     hideIgnoredNames: true
+    hideVcsIgnoredFiles: true
     squashDirectoryNames: true
   "vim-mode-plus":
     blackholeRegisteredOperators: [

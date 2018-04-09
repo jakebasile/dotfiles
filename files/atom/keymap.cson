@@ -5,7 +5,7 @@
   'z e': 'unset!'
   'z enter': 'unset!'
   'z s': 'unset!'
-  'z z': 'proto-repl:load-current-file'
+  'z z': 'proto-repl:execute-selected-text'
   'z c': 'proto-repl:remote-nrepl-connection'
   'z d': 'proto-repl:exit-repl'
   'z t': 'proto-repl:run-all-tests'
