@@ -25,10 +25,11 @@ module.exports = {
     css: '',
 
     // custom css to embed in the terminal window
-    termCSS: 'x-row { font-weight: 500 }',
+    // termCSS: 'x-row { font-weight: 500 }',
+    //termCSS: "_title {display: hidden}}"
 
     // custom padding (css format, i.e.: `top right bottom left`)
-    padding: '10px 10px 0px 10px',
+    padding: '10px 0px 0px 10px',
 
     // the full list. if you're going to provide the full color palette,
     // including the 6 x 6 color cubes and the grayscale map, just provide
@@ -57,7 +58,7 @@ module.exports = {
     shell: '/usr/local/bin/zsh',
 
     // for advanced config flags please refer to https://hyperterm.org/#cfg
-    titleBarStyle: 'hidden'
+    titleBarStyle: 'hidden-inset'
   },
 
   // a list of plugins to fetch and install from npm
@@ -70,13 +71,16 @@ module.exports = {
     'nord-hyper',
     'hypercwd',
     'hyper-statusline',
-    'hyperlinks',
+    //'hyperlinks',
     'hyper-alt-click',
-    'hyper-autohide-tabs',
+    // 'hyper-autohide-tabs',
+    //'hyper-tabs-enhanced'
   ],
 
   // in development, you can create a directory under
   // `~/.hyperterm_plugins/local/` and include it here
   // to load it and avoid it being `npm install`ed
-  localPlugins: []
+  // localPlugins: [
+  //   "autohide-tabs"
+  // ]
 };

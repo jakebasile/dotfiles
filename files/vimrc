@@ -25,17 +25,8 @@ filetype indent plugin on
 
 " Colors
 
-if (has("nvim"))
-  let $NVIM_TUI_ENABLE_TRUE_COLOR=1
-endif
 
-
-"set t_Co=256
 color nord
-if (has("termguicolors"))
-  set termguicolors
-endif
-let g:onedark_termcolors=16
 let g:airline_theme="nord"
 let g:airline#exenstions#tagbar#enabled=1
 "set t_ut=
@@ -161,4 +152,3 @@ nnoremap <Space> @q
 " nnoremap <C-U> i<C-r>=pyeval('str(uuid.uuid4())')<CR><Esc>
 
 "vi: ft=vim
-

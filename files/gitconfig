@@ -2,10 +2,11 @@
 [user]
     name = Jake Basile
     email = git@jakebasile.com
-    signingkey = 0D8BF0ADBE570F54
+    signingkey = CC746148BA81DC70
 [core]
     excludesfile = ~/.gitignore_global
     editor = vim -f
+	quotepath = false
 [mergetool "vimdiff"]
     cmd = /usr/local/bin/vimdiff -fo "$REMOTE" "$MERGED" "$LOCAL"
 [merge]

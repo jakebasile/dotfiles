@@ -1,11 +1,10 @@
-git@github.com:alvan/vim-closetag.git
+git@github.com:arcticicestudio/nord-vim.git
+git@github.com:bhurlow/vim-parinfer.git
 git@github.com:bling/vim-airline.git
 git@github.com:ekalinin/Dockerfile.vim.git
 git@github.com:exu/pgsql.vim.git
 git@github.com:guns/vim-clojure-static.git
-git@github.com:jiangmiao/auto-pairs.git
 git@github.com:jistr/vim-nerdtree-tabs.git
-git@github.com:joshdick/onedark.vim.git
 git@github.com:kien/rainbow_parentheses.vim.git
 git@github.com:majutsushi/tagbar.git
 git@github.com:nathanaelkane/vim-indent-guides.git
@@ -18,6 +17,3 @@ git@github.com:tpope/vim-projectionist.git
 git@github.com:tpope/vim-salve.git
 git@github.com:tpope/vim-surround.git
 git@github.com:vim-airline/vim-airline-themes.git
-git@github.com:elixir-lang/vim-elixir.git
-git@github.com:arcticicestudio/nord-vim.git
-git@github.com:bhurlow/vim-parinfer.git

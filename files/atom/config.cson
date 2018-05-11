@@ -134,7 +134,6 @@
     core: {}
   "tree-view":
     hideIgnoredNames: true
-    hideVcsIgnoredFiles: true
     squashDirectoryNames: true
   "vim-mode-plus":
     blackholeRegisteredOperators: [

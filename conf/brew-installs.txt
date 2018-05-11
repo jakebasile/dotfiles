@@ -30,3 +30,5 @@ wget
 xz
 yarn
 zsh
+fd
+ripgrep

@@ -6,9 +6,11 @@
   'z enter': 'unset!'
   'z s': 'unset!'
   'z z': 'proto-repl:execute-selected-text'
-  'z c': 'proto-repl:remote-nrepl-connection'
-  'z d': 'proto-repl:exit-repl'
+  'z r': 'proto-repl:remote-nrepl-connection'
+  'z x': 'proto-repl:exit-repl'
   'z t': 'proto-repl:run-all-tests'
+  'z d': 'proto-repl:print-var-documentation'
+  # 'z c': 'proto-repl:open-file-containing-var'
 # '.workspace':
 #   'ctrl-shift-g': 'github:toggle-git-tab-focus'
 # '.platform-darwin, .platform-win32, .platform-linux':
