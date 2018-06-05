@@ -18,13 +18,13 @@
 "
 set nocompatible
 set backspace=2
+set visualbell
 
 execute pathogen#infect()
 syntax on
 filetype indent plugin on
 
 " Colors
-
 
 color nord
 let g:airline_theme="nord"
