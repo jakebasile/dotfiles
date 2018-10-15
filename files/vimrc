@@ -14,11 +14,11 @@
 "   nerdtree-tabs
 "   projectionist
 "   surround
-"   rainbow parentheses
 "
 set nocompatible
 set backspace=2
 set visualbell
+set clipboard=unnamed
 
 execute pathogen#infect()
 syntax on
@@ -27,6 +27,7 @@ filetype indent plugin on
 " Colors
 
 color nord
+hi Comment ctermfg=13
 let g:airline_theme="nord"
 let g:airline#exenstions#tagbar#enabled=1
 "set t_ut=
@@ -119,12 +120,6 @@ let NERDTreeIgnore = ['\.pyc$', '\.rdb$','\.egg-info', 'dist', 'target']
 let NERDTreeQuitOnOpen = 1
 let NERDTreeDirArrows = 0
 
-" Rainbow Parentheses
-
-au VimEnter * RainbowParenthesesToggle
-au Syntax * RainbowParenthesesLoadRound
-au Syntax * RainbowParenthesesLoadSquare
-au Syntax * RainbowParenthesesLoadBraces
 
 " Bindings
 map <C-s> :set spell! spelllang=en_us<CR>

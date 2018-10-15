@@ -144,7 +144,7 @@ export SPROMPT='%{%F{red}%}%R%{%f%} -> %{%F{blue}%}%r%{%f%} (y, n, a, e)'
 source ~/.path
 
 if [[ $(uname -s) == "Darwin" ]]; then
-  export EDITOR='atom'
+  export EDITOR='vim'
 else
   export EDITOR='vim'
 fi
