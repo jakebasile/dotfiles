@@ -32,7 +32,6 @@
     disabledPackages: [
       "deprecation-cop"
       "autocomplete-snippets"
-      "linter-write-good"
     ]
     ignoredNames: [
       ".git"
@@ -50,7 +49,7 @@
     projectHome: "/Users/jakebasile/Code"
     telemetryConsent: "no"
     themes: [
-      "nord-atom-ui"
+      "one-dark-ui"
       "nord-atom-syntax"
     ]
     titleBar: "custom"
@@ -104,9 +103,12 @@
     strict: false
   "markdown-preview": {}
   "nord-atom-syntax":
-    accessibility: {}
+    accessibility:
+      commentContrast: 20
   "nord-atom-ui": {}
-  "one-dark-ui": {}
+  "one-dark-ui":
+    fontSize: 14
+    tabCloseButton: "Left"
   organized: {}
   parinfer:
     "file-extensions": [
@@ -132,6 +134,7 @@
     refreshOnReplStart: false
   "terminal-plus":
     core: {}
+  "tool-bar": {}
   "tree-view":
     hideIgnoredNames: true
     squashDirectoryNames: true
@@ -140,7 +143,6 @@
       "change*"
       "substitute*"
     ]
-    useClipboardAsDefaultRegister: false
   welcome:
     showOnStartup: false
 ".ansi.text":
