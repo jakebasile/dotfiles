@@ -109,6 +109,7 @@
   "one-dark-ui":
     fontSize: 14
     tabCloseButton: "Left"
+    tabSizing: "Maximum"
   organized: {}
   parinfer:
     "file-extensions": [
