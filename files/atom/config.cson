@@ -5,6 +5,7 @@
   "autocomplete-plus":
     confirmCompletion: "tab always, enter when suggestion explicitly selected"
   "bracket-matcher":
+    alwaysSkipClosingPairs: true
     autocompleteCharacters: [
       "()"
       "[]"
@@ -15,6 +16,7 @@
       "«»"
     ]
   core:
+    autoHideMenuBar: true
     closeDeletedFileTabs: true
     customFileTypes:
       "source.ini": [
@@ -29,10 +31,13 @@
       "source.python": [
         "BUCK"
       ]
+    destroyEmptyPanes: false
     disabledPackages: [
       "deprecation-cop"
       "autocomplete-snippets"
+      "lisp-paredit"
     ]
+    fileSystemWatcher: "experimental"
     ignoredNames: [
       ".git"
       ".hg"
@@ -52,17 +57,20 @@
       "one-dark-ui"
       "nord-atom-syntax"
     ]
-    titleBar: "custom"
     uriHandlerRegistration: "always"
   editor:
+    atomicSoftTabs: false
     autoIndentOnPaste: false
     fontFamily: "IBM Plex Mono"
     invisibles: {}
     scrollPastEnd: true
     showIndentGuide: true
+    showInvisibles: true
     softWrap: true
   "exception-reporting":
     userId: "0dacece5-6c28-aa5c-7949-423cff26188c"
+  "line-ending-selector":
+    defaultLineEnding: "LF"
   "linter-ui-default":
     showStatusBar: false
   "linter-write-good":
@@ -108,7 +116,6 @@
   "nord-atom-ui": {}
   "one-dark-ui":
     fontSize: 14
-    tabCloseButton: "Left"
     tabSizing: "Maximum"
   organized: {}
   parinfer:
@@ -155,7 +162,7 @@
     softWrapAtPreferredLineLength: false
 ".clojure.source":
   editor:
-    autoIndent: false
+    autoIndent: true
     autoIndentOnPaste: false
     nonWordCharacters: "()\"':,;~@#$%^&{}[]`"
 ".hack.html.text":
