@@ -29,6 +29,7 @@
       "source.python": [
         "BUCK"
       ]
+    destroyEmptyPanes: false
     disabledPackages: [
       "deprecation-cop"
       "autocomplete-snippets"
@@ -45,7 +46,9 @@
       "target*"
     ]
     openEmptyEditorOnStart: true
-    packagesWithKeymapsDisabled: []
+    packagesWithKeymapsDisabled: [
+      "git-blame"
+    ]
     projectHome: "/Users/jakebasile/Code"
     telemetryConsent: "no"
     themes: [
@@ -63,6 +66,10 @@
     softWrap: true
   "exception-reporting":
     userId: "0dacece5-6c28-aa5c-7949-423cff26188c"
+  "git-blame":
+    colorCommitAuthors: true
+    dateFormatString: "YYYY-MM"
+    showLastNames: false
   "linter-ui-default":
     showStatusBar: false
   "linter-write-good":
@@ -132,6 +139,8 @@
     displayExecutedCodeInRepl: false
     displayHelpText: false
     leinPath: "/usr/local/bin/lein"
+    refreshBeforeRunningSingleTest: false
+    refreshBeforeRunningTestFile: false
     refreshOnReplStart: false
   "terminal-plus":
     core: {}
