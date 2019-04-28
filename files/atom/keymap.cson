@@ -3,6 +3,7 @@
   'z .': 'unset!'
   'z c': 'unset!'
   'z b': 'proto-repl:execute-top-block'
+  'z B': 'proto-repl:execute-block' 
   'z e': 'unset!'
   'z enter': 'unset!'
   'z s': 'unset!'

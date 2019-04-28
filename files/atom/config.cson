@@ -37,7 +37,6 @@
       "autocomplete-snippets"
       "lisp-paredit"
     ]
-    fileSystemWatcher: "experimental"
     ignoredNames: [
       ".git"
       ".hg"
@@ -67,7 +66,6 @@
     invisibles: {}
     scrollPastEnd: true
     showIndentGuide: true
-    showInvisibles: true
     softWrap: true
   "exception-reporting":
     userId: "0dacece5-6c28-aa5c-7949-423cff26188c"
@@ -122,6 +120,7 @@
   "nord-atom-ui": {}
   "one-dark-ui":
     fontSize: 14
+    tabCloseButton: "Left"
     tabSizing: "Maximum"
   organized: {}
   parinfer:
