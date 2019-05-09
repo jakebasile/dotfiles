@@ -26,6 +26,20 @@ setopt SHARE_HISTORY
 
 # Functions
 
+function lsjava() {
+  /usr/libexec/java_home -V 2>&1 |\
+    grep 'x86_64' |\
+    sed -E 's/ *([0-9\._]*),.* *\"(.*)\".*/\1:\2/' |\
+    column -t -s ':'
+}
+
+function usejava() {
+  local home=$(/usr/libexec/java_home -v $1)
+  if [[ -d $home ]]; then
+    export JAVA_HOME=$home
+  fi
+}
+
 function get_branch() {
   git branch --no-color 2> /dev/null | grep '\*' | sed 's/\* \(.*\)/:%{%F{yellow}%}\1%{%f%}/'
 }
