@@ -49,9 +49,6 @@
       "target*"
     ]
     openEmptyEditorOnStart: true
-    packagesWithKeymapsDisabled: [
-      "git-blame"
-    ]
     projectHome: "/Users/jakebasile/Code"
     telemetryConsent: "no"
     themes: [
@@ -73,6 +70,8 @@
     colorCommitAuthors: true
     dateFormatString: "YYYY-MM"
     showLastNames: false
+  "git-diff": {}
+  github: {}
   "line-ending-selector":
     defaultLineEnding: "LF"
   "linter-ui-default":
@@ -143,6 +142,7 @@
     bootPath: "/usr/local/bin/boot"
     displayExecutedCodeInRepl: false
     displayHelpText: false
+    enableCompletions: false
     leinPath: "/usr/local/bin/lein"
     refreshBeforeRunningSingleTest: false
     refreshBeforeRunningTestFile: false
