@@ -1,6 +1,6 @@
 bracket-colorizer@1.4.0
 busy-signal@2.0.1
-chlorine@0.4.3
+chlorine@0.4.4
 git-blame@1.8.0
 highlight-selected@0.17.0
 ink@0.11.8
