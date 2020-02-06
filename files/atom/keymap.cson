@@ -1,20 +1,39 @@
 'atom-text-editor.vim-mode-plus:not(.insert-mode):not(.operator-pending-mode)':
   'z -': 'unset!'
   'z .': 'unset!'
-  'z c': 'unset!'
-  'z b': 'proto-repl:execute-top-block'
-  'z B': 'proto-repl:execute-block' 
   'z e': 'unset!'
   'z enter': 'unset!'
-  'z s': 'unset!'
-  'z z': 'proto-repl:execute-selected-text'
-  'z r': 'proto-repl:remote-nrepl-connection'
-  'z x': 'proto-repl:exit-repl'
-  'z T': 'proto-repl:run-all-tests',
-  'z t': 'proto-repl:run-tests-in-namespace',
-  'z d': 'proto-repl:print-var-documentation',
-  'z f': 'proto-repl:load-current-file',
-  'z D': 'proto-repl:open-file-containing-var'
+
+# proto-repl
+  # 'z c': 'proto-repl:remote-nrepl-connection'
+  # 'z C': 'proto-repl:exit-repl'
+  # 'z z': 'proto-repl:execute-top-block'
+  # 'z Z': 'proto-repl:execute-block'
+  # 'z s': 'proto-repl:execute-selected-text'
+  # 'z T': 'proto-repl:run-all-tests',
+  # 'z t': 'proto-repl:run-tests-in-namespace',
+  # 'z d': 'proto-repl:print-var-documentation',
+  # 'z D': 'proto-repl:open-file-containing-var'
+  # 'z f': 'proto-repl:load-current-file',
+  # 'z x': 'proto-repl:clean'
+
+# chlorine
+  'z c': 'chlorine:connect-clojure-socket-repl'
+  'z C': 'chlorine:disconnect'
+  'z z': 'chlorine:evaluate-top-block'
+  'z Z': 'chlorine:evaluate-block'
+  'z b': 'chlorine:evaluate-selection'
+  'z x': 'inline-results:clear-all'
+  'z X': 'chlorine:clear-console'
+  'z t': 'chlorine:run-tests-in-ns',
+  'z d': 'chlorine:doc-for-var',
+  'z f': 'chlorine:load-file',
+  'z R': 'chlorine:refresh-namespaces'
+  'z D': 'chlorine:go-to-var-definition'
+
+
+
+
 # '.workspace':
 #   'ctrl-shift-g': 'github:toggle-git-tab-focus'
 # '.platform-darwin, .platform-win32, .platform-linux':

@@ -1,7 +1,4 @@
 "*":
-  "atom-beautify":
-    general:
-      _analyticsUserId: "ca3b458a-9279-4470-91ff-ab6f2bfeba74"
   "autocomplete-plus":
     confirmCompletion: "tab always, enter when suggestion explicitly selected"
   "bracket-matcher":
@@ -15,6 +12,8 @@
       "‘’"
       "«»"
     ]
+  chlorine:
+    "refresh-mode": "full"
   core:
     autoHideMenuBar: true
     closeDeletedFileTabs: true
@@ -31,11 +30,13 @@
       "source.python": [
         "BUCK"
       ]
-    destroyEmptyPanes: false
+    destroyEmptyPanes: true
     disabledPackages: [
       "deprecation-cop"
       "autocomplete-snippets"
       "lisp-paredit"
+      "proto-repl-charts"
+      "proto-repl"
     ]
     ignoredNames: [
       ".git"
@@ -60,6 +61,7 @@
     atomicSoftTabs: false
     autoIndentOnPaste: false
     fontFamily: "IBM Plex Mono"
+    fontSize: 16
     invisibles: {}
     scrollPastEnd: true
     showIndentGuide: true
@@ -68,6 +70,7 @@
     userId: "0dacece5-6c28-aa5c-7949-423cff26188c"
   "git-blame":
     colorCommitAuthors: true
+    columnWidth: 211
     dateFormatString: "YYYY-MM"
     showLastNames: false
   "git-diff": {}
@@ -75,6 +78,7 @@
   "line-ending-selector":
     defaultLineEnding: "LF"
   "linter-ui-default":
+    showPanel: true
     showStatusBar: false
   "linter-write-good":
     severityLevel: "Warning"
@@ -158,8 +162,11 @@
       "change*"
       "substitute*"
     ]
+    useClipboardAsDefaultRegister: false
   welcome:
     showOnStartup: false
+  whitespace:
+    ignoreWhitespaceOnCurrentLine: false
 ".ansi.text":
   editor:
     autoIndent: true
