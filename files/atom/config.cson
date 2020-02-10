@@ -1,6 +1,8 @@
 "*":
   "autocomplete-plus":
     confirmCompletion: "tab always, enter when suggestion explicitly selected"
+  "bracket-colorizer":
+    alternate_different: true
   "bracket-matcher":
     alwaysSkipClosingPairs: true
     autocompleteCharacters: [
@@ -37,6 +39,8 @@
       "lisp-paredit"
       "proto-repl-charts"
       "proto-repl"
+      "linter"
+      "linter-ui-default"
     ]
     ignoredNames: [
       ".git"
@@ -50,6 +54,9 @@
       "target*"
     ]
     openEmptyEditorOnStart: true
+    packagesWithKeymapsDisabled: [
+      "git-blame"
+    ]
     projectHome: "/Users/jakebasile/Code"
     telemetryConsent: "no"
     themes: [
@@ -74,7 +81,8 @@
     dateFormatString: "YYYY-MM"
     showLastNames: false
   "git-diff": {}
-  github: {}
+  github:
+    remoteFetchProtocol: "ssh"
   "line-ending-selector":
     defaultLineEnding: "LF"
   "linter-ui-default":

@@ -4,6 +4,8 @@
   'z e': 'unset!'
   'z enter': 'unset!'
 
+
+
 # proto-repl
   # 'z c': 'proto-repl:remote-nrepl-connection'
   # 'z C': 'proto-repl:exit-repl'
@@ -32,9 +34,10 @@
   'z D': 'chlorine:go-to-var-definition'
 
 
-
+  'ctrl-shift-g g': 'github:toggle-git-tab-focus'
+  'ctrl-shift-g h': 'github:toggle-github-tab-focus'
+  'ctrl-shift-g b': 'git-blame:toggle'
 
 # '.workspace':
-#   'ctrl-shift-g': 'github:toggle-git-tab-focus'
 # '.platform-darwin, .platform-win32, .platform-linux':
 #   'ctrl-g': 'unset!'
