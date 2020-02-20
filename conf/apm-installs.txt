@@ -1,9 +1,10 @@
 bracket-colorizer@1.4.0
 busy-signal@2.0.1
-chlorine@0.4.4
+chlorine@0.4.6
 git-blame@1.8.0
+github@0.34.1
 highlight-selected@0.17.0
-ink@0.11.8
+ink@0.12.0
 intentions@1.1.5
 language-docker@1.1.8
 language-latex@1.2.0

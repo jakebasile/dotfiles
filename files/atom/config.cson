@@ -5,6 +5,7 @@
     alternate_different: true
   "bracket-matcher":
     alwaysSkipClosingPairs: true
+    autocompleteBrackets: false
     autocompleteCharacters: [
       "()"
       "[]"
@@ -68,7 +69,6 @@
     atomicSoftTabs: false
     autoIndentOnPaste: false
     fontFamily: "IBM Plex Mono"
-    fontSize: 16
     invisibles: {}
     scrollPastEnd: true
     showIndentGuide: true
