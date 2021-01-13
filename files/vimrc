@@ -1,26 +1,41 @@
 " Jake Basile's .vimrc
 "
-" Plugins used:
-"   pathogen
-"   nerdtree
-"   tagbar
-"   airline
-"   classpath
-"   dispatch
-"   fireplace
-"   fugitive
-"   indent-guides
-"   leiningen
-"   nerdtree-tabs
-"   projectionist
-"   surround
-"
+" install plug
+if empty(glob('~/.vim/autoload/plug.vim'))
+  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
+    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+endif
+
+" install plugins
+call plug#begin('~/.vim/plugged')
+
+Plug 'airblade/vim-gitgutter'
+Plug 'arcticicestudio/nord-vim'
+Plug 'bhurlow/vim-parinfer'
+Plug 'guns/vim-sexp'
+Plug 'jistr/vim-nerdtree-tabs'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
+Plug 'liquidz/vim-iced', {'for': 'clojure'}
+Plug 'liquidz/vim-iced-asyncomplete', {'for': 'clojure'}
+Plug 'luochen1990/rainbow'
+Plug 'nathanaelkane/vim-indent-guides'
+Plug 'prabirshrestha/asyncomplete.vim'
+Plug 'preservim/tagbar'
+Plug 'scrooloose/nerdtree'
+Plug 'tpope/vim-commentary'
+Plug 'tpope/vim-sensible'
+Plug 'tpope/vim-surround'
+Plug 'vim-airline/vim-airline'
+
+call plug#end()
+
 set nocompatible
 set backspace=2
 set visualbell
 set clipboard=unnamed
 
-execute pathogen#infect()
 syntax on
 filetype indent plugin on
 
@@ -31,6 +46,7 @@ hi Comment ctermfg=13
 let g:airline_theme="nord"
 let g:airline#exenstions#tagbar#enabled=1
 "set t_ut=
+let g:rainbow_active = 1
 
 " Filetypes
 
@@ -92,15 +108,12 @@ let g:sql_type_default = 'pgsql'
 " Go
 let g:go_def_mapping_enabled=0
 
-" JSX
-let g:jsx_ext_required = 0
-
-" Flow
-let g:javascript_plugin_flow = 1
+" Clojure
+let g:iced_enable_default_key_mappings = v:true
 
 " GUI Options
 
-set guifont=Source\ Code\ Pro:h14
+set guifont=IBM\ Plex\ Mono:h14
 set guioptions=egmt
 set guioptions-=rl
 set guioptions-=RL
@@ -120,6 +133,11 @@ let NERDTreeIgnore = ['\.pyc$', '\.rdb$','\.egg-info', 'dist', 'target']
 let NERDTreeQuitOnOpen = 1
 let NERDTreeDirArrows = 0
 
+" asynccomplete.vim
+
+inoremap <expr> <Tab>   pumvisible() ? "\<C-n>" : "\<Tab>"
+inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
+inoremap <expr> <cr>    pumvisible() ? asyncomplete#close_popup() : "\<cr>"
 
 " Bindings
 map <C-s> :set spell! spelllang=en_us<CR>
@@ -139,11 +157,17 @@ nmap <A-6> 6gt
 nmap <A-7> 7gt
 nmap <A-8> 8gt
 nmap <A-9> 9gt
-map <C-i> :IndentGuidesToggle<CR>
-nnoremap <Space> @q
 
-" UUID
-" py import uuid
-" nnoremap <C-U> i<C-r>=pyeval('str(uuid.uuid4())')<CR><Esc>
+nmap <C-p> :Files<CR>
+
+map <C-i> :IndentGuidesToggle<CR>
+"nnoremap <Space> @q
+
+set timeout timeoutlen=3000 ttimeoutlen=100
+
+nnoremap <SPACE> <Nop>
+map <Space> <Leader>
+" inoremap ,, <C-x><C-x>
+" let g:iced_default_key_mapping_leader = 'z'
 
 "vi: ft=vim
