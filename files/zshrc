@@ -155,7 +155,7 @@ export SPROMPT='%{%F{red}%}%R%{%f%} -> %{%F{blue}%}%r%{%f%} (y, n, a, e)'
 
 # Environment
 
-export PATH=$HOME/bin:$PATH
+export PATH=$HOME/bin:$PATH:$HOME/.vim/plugged/vim-iced/bin
 
 source ~/.path
 

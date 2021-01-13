@@ -70,7 +70,7 @@ module.exports = {
   plugins: [
     'nord-hyper',
     'hypercwd',
-    'hyper-statusline',
+    // 'hyper-statusline',
     //'hyperlinks',
     'hyper-alt-click',
     // 'hyper-autohide-tabs',

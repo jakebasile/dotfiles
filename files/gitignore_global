@@ -10,3 +10,5 @@ env/
 cert
 key
 datomic.license
+repository-overrides.clj
+*.code-workspace

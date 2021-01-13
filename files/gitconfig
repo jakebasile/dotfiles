@@ -50,6 +50,8 @@
     cdf = diff --cached
     dt = difftool
     cm = commit
+    sw = switch
+    re = restore
 [push]
     default = upstream
 [filter "lfs"]
@@ -57,3 +59,7 @@
 	smudge = git-lfs smudge -- %f
 	process = git-lfs filter-process
 	required = true
+[commit]
+	gpgsign = true
+[pull]
+	ff = only
