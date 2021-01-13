@@ -37,11 +37,6 @@
     disabledPackages: [
       "deprecation-cop"
       "autocomplete-snippets"
-      "lisp-paredit"
-      "proto-repl-charts"
-      "proto-repl"
-      "linter"
-      "linter-ui-default"
     ]
     ignoredNames: [
       ".git"
@@ -77,7 +72,7 @@
     userId: "0dacece5-6c28-aa5c-7949-423cff26188c"
   "git-blame":
     colorCommitAuthors: true
-    columnWidth: 211
+    columnWidth: 231
     dateFormatString: "YYYY-MM"
     showLastNames: false
   "git-diff": {}
@@ -163,7 +158,8 @@
     core: {}
   "tool-bar": {}
   "tree-view":
-    hideIgnoredNames: true
+    hideIgnoredNames: false
+    hideVcsIgnoredFiles: false
     squashDirectoryNames: true
   "vim-mode-plus":
     blackholeRegisteredOperators: [

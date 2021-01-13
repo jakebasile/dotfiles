@@ -20,14 +20,15 @@
   # 'z x': 'proto-repl:clean'
 
 # chlorine
-  'z c': 'chlorine:connect-clojure-socket-repl'
+  'z c': 'chlorine:connect-socket-repl'
   'z C': 'chlorine:disconnect'
   'z z': 'chlorine:evaluate-top-block'
   'z Z': 'chlorine:evaluate-block'
   'z b': 'chlorine:evaluate-selection'
-  'z x': 'inline-results:clear-all'
+  'z x': 'chlorine:clear-inline-results'
   'z X': 'chlorine:clear-console'
   'z t': 'chlorine:run-tests-in-ns',
+  'z T': 'chlorine:run-test-for-var',
   'z d': 'chlorine:doc-for-var',
   'z f': 'chlorine:load-file',
   'z R': 'chlorine:refresh-namespaces'
