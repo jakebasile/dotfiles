@@ -1,10 +1,10 @@
 # Jake Basile's .gitconfig
 [user]
-    name = Jake Basile
-    email = git@jakebasile.com
-    signingkey = CC746148BA81DC70
+  name = Jake Basile
+  email = git@jakebasile.com
+  signingkey = CC746148BA81DC70
 [core]
-    excludesfile = ~/.gitignore_global
+  excludesfile = ~/.gitignore_global
 	quotepath = false
 [mergetool "vimdiff"]
     cmd = /usr/local/bin/vimdiff -fo "$REMOTE" "$MERGED" "$LOCAL"
@@ -42,16 +42,20 @@
     slag = log --graph --format=theone --all
     stat = diff --stat
     cstat = diff --cached --stat
+    a = add
+    aa = add -A
+    ap = add -p
     st = status
     co = checkout
     br = branch
     bra = branch -a
     df = diff
-    cdf = diff --cached
+    dfc = diff --cached
     dt = difftool
     cm = commit
     sw = switch
-    re = restore
+    r = restore
+    rc = restore --staged
 [push]
     default = upstream
 [filter "lfs"]
