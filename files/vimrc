@@ -28,6 +28,7 @@ Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-sensible'
 Plug 'tpope/vim-surround'
 Plug 'vim-airline/vim-airline'
+Plug 'mtth/scratch.vim'
 
 call plug#end()
 
@@ -169,5 +170,11 @@ nnoremap <SPACE> <Nop>
 map <Space> <Leader>
 " inoremap ,, <C-x><C-x>
 " let g:iced_default_key_mapping_leader = 'z'
+
+" scratch.vim
+let g:scratch_no_mappings=1
+let g:scratch_autohide=1
+nmap ss :Scratch<CR>
+xmap ss :ScratchSelection<CR>
 
 "vi: ft=vim
