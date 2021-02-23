@@ -53,11 +53,12 @@
     dfc = diff --cached
     dt = difftool
     cm = commit
+    cma = commit --amend
     sw = switch
     r = restore
     rc = restore --staged
 [push]
-    default = upstream
+	default = current
 [filter "lfs"]
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
