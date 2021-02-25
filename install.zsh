@@ -8,7 +8,8 @@ if [[ `uname -s` = "Darwin" ]]; then
 fi
 
 mkdir ~/.lein
-mkdir ~/.atom
+mkdir ~/.vimbackups
+touch ~/.path
 
 # link dotfiles
 for relative_source_file in $( find files -type f ); do
