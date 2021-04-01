@@ -4,8 +4,8 @@
 # History
 
 HISTFILE=~/.zsh_history
-HISTSIZE=10000
-SAVEHIST=10000
+HISTSIZE=69420
+SAVEHIST=69420
 
 # vi mode
 
@@ -13,15 +13,18 @@ bindkey -v
 
 # Options
 
-setopt appendhistory beep extendedglob nomatch
+setopt EXTENDEDGLOB
+setopt GLOBDOTS
+
+setopt BEEP
+setopt NOMATCH
 setopt RCQUOTES
 setopt NOCLOBBER
 setopt PROMPT_SUBST
 setopt CORRECT
-setopt GLOBDOTS
+
 setopt HISTIGNORESPACE
 setopt HISTIGNOREDUPS
-setopt INC_APPEND_HISTORY
 setopt SHARE_HISTORY
 
 # Functions
@@ -61,40 +64,6 @@ function ppedn() {
     -e'(-> (planck.core/slurp planck.core/*in*) cljs.tools.reader/read-string (planck.pprint.data/pprint {:width 70 :theme (planck.themes/get-theme :light)}))'
 }
 
-function hpedn() {
-  if [[ `uname -s` != "Darwin" ]]; then
-    local tmp=$(mktemp -p /tmp "ppedn-XXXXXXXX.clj")
-  else
-    local tmp=$(mktemp "/tmp/ppedn.clj.XXXXXXXX")
-  fi
-  echo "(require '[puget.printer :as puget])" >> $tmp
-  if [[ ! -z $1 ]]; then
-    # if given direct input, use that
-    echo "(puget/cprint '$1 {:color-markup :html-inline})" >> $tmp
-  else
-    # if nothing was given directly, use stdin
-    echo "(puget/cprint '$(cat) {:color-markup :html-inline})" >> $tmp
-  fi
-  lein with-profile ppedn run -m clojure.main $tmp 2> /dev/null
-}
-
-function cpedn() {
-  if [[ `uname -s` != "Darwin" ]]; then
-    local tmp=$(mktemp -p /tmp "ppedn-XXXXXXXX.clj")
-  else
-    local tmp=$(mktemp "/tmp/ppedn.clj.XXXXXXXX")
-  fi
-  echo "(require '[puget.printer :as puget])" >> $tmp
-  if [[ ! -z $1 ]]; then
-    # if given direct input, use that
-    echo "(puget/cprint '$1)" >> $tmp
-  else
-    # if nothing was given directly, use stdin
-    echo "(puget/cprint '$(cat))" >> $tmp
-  fi
-  lein with-profile ppedn run -m clojure.main $tmp 2> /dev/null
-}
-
 # these wrap up curl with some default arguments and pretty formatted output.
 
 function cjson() {
@@ -113,15 +82,6 @@ function chtml() {
 
 function cxml() {
   curl -sD /dev/stderr -H "accept: application/xml" $@ | xmllint --format - | less -FXr
-}
-
-# Thanks, dogbane of http://unix.stackexchange.com/a/30486
-function calc() {
-  bc -l <<< "$@"
-}
-
-function yarn() {
-  command yarn "$@" --no-emoji
 }
 
 # this makes tmux a bit easier to work with for my usage. with no arguments,
@@ -145,7 +105,7 @@ function t() {
 # Completion
 
 autoload -Uz compinit
-compinit
+compinit -u
 zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
 zstyle ':completion:*' menu select
 zstyle ':completion:*' max-errors 3
@@ -161,11 +121,7 @@ export PATH=$HOME/bin:$PATH:$HOME/.vim/plugged/vim-iced/bin
 
 source ~/.path
 
-if [[ $(uname -s) == "Darwin" ]]; then
-  export EDITOR='vim'
-else
-  export EDITOR='vim'
-fi
+export EDITOR='vim'
 export LANG=en_US.UTF-8
 export GPG_TTY=`tty`
 export COMPOSE_HTTP_TIMEOUT=86400
@@ -179,21 +135,15 @@ export HOMEBREW_NO_AUTO_UPDATE=1
 if [[ `uname -s` != "Darwin" ]]; then
   alias pbcopy='xclip -in -sel clip'
   alias pbpaste='xclip -out -sel clip'
-else
-  alias atom='atom --disable-gpu'
 fi
 alias top='htop' # htop > top
 alias ls='ls -lhFG' la='ls -lahFG' # Verbose LS
-alias tls='tmux list-sessions'
 alias tcopy='tmux save-buffer - | pbcopy'
 alias tpaste='pbpaste | tmux load-buffer -'
 alias xmlformat="xmllint --format -"
 alias pbxml="pbpaste | xmlformat"
 alias jdate='date -ud "+1 year" +"\"%Y-%m-%dT%H:%M:%SZ\""'
 alias g='git'
-
-alias compose=docker-compose
-alias machine=docker-machine
 
 # Misc
 
