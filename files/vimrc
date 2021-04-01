@@ -17,8 +17,8 @@ Plug 'guns/vim-sexp'
 Plug 'jistr/vim-nerdtree-tabs'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
-Plug 'liquidz/vim-iced', {'for': 'clojure'}
-Plug 'liquidz/vim-iced-asyncomplete', {'for': 'clojure'}
+Plug 'liquidz/vim-iced'
+Plug 'liquidz/vim-iced-asyncomplete'
 Plug 'luochen1990/rainbow'
 Plug 'nathanaelkane/vim-indent-guides'
 Plug 'prabirshrestha/asyncomplete.vim'
@@ -178,5 +178,16 @@ let g:scratch_autohide=1
 let g:scratch_persistence_file = "~/.vim/scratch.vim"
 nmap ss :Scratch<CR>
 xmap ss :ScratchSelection<CR>
+
+" sexp
+let g:sexp_enable_insert_mode_mappings = 0
+
+fun! FixWhitespace()
+    let l:save = winsaveview()
+    keeppatterns %s/\s\+$//e
+    call winrestview(l:save)
+endfun
+command! FixWhitespace call FixWhitespace()
+autocmd BufWritePre * :call FixWhitespace()
 
 "vi: ft=vim

@@ -190,6 +190,7 @@ alias tpaste='pbpaste | tmux load-buffer -'
 alias xmlformat="xmllint --format -"
 alias pbxml="pbpaste | xmlformat"
 alias jdate='date -ud "+1 year" +"\"%Y-%m-%dT%H:%M:%SZ\""'
+alias g='git'
 
 alias compose=docker-compose
 alias machine=docker-machine
