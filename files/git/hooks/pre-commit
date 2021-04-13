@@ -1,0 +1,23 @@
+#!/bin/zsh
+set -e
+if [[ -t 1 ]]; then
+  autoload -Uz colors && colors
+fi
+
+function zshexit() {
+  print $reset_color
+}
+
+the_regex='^\+.*#p [^ ]'
+
+if git diff --cached -U0 -p | grep -qE $the_regex; then
+  print $fg_bold[red]
+  cowsay -p "You have attempted to commit changes that look like hash-p! Please remove them, or run \`git commit --no-verify\` to shut me up."
+  print $fg[green]
+  echo "The offending lines look like:"
+  git diff --cached | grep -E $the_regex
+  print $reset_color
+  exit 1
+fi
+
+

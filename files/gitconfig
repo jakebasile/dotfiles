@@ -6,6 +6,7 @@
 [core]
   excludesfile = ~/.gitignore_global
 	quotepath = false
+	hooksPath = /Users/jake/.git/hooks
 [mergetool "vimdiff"]
     cmd = /usr/local/bin/vimdiff -fo "$REMOTE" "$MERGED" "$LOCAL"
 [merge]
