@@ -6,5 +6,8 @@
                      (require '[criterium.core :as cr])
                      (defmethod print-method clojure.lang.IPersistentMap [m, ^java.io.Writer w]
                        (#'clojure.core/print-meta m w)
-                       (#'clojure.core/print-map m #'clojure.core/pr-on w))]}}
-
+                       (#'clojure.core/print-map m #'clojure.core/pr-on w))
+                     (defmethod clojure.pprint/simple-dispatch clojure.lang.IPersistentMap
+                       [m]
+                       (with-redefs [clojure.core/lift-ns (constantly nil)]
+                         (#'clojure.pprint/pprint-map m)))]}}
