@@ -58,6 +58,7 @@ augroup filetypedetect
     au! BufRead,BufNewFile *.dot setfiletype dot
     au! BufRead,BufNewFile *.clj setfiletype clojure
     au! BufRead,BufNewFile *.cljs setfiletype clojure
+    au! BufRead,BufNewFile *.bb setfiletype clojure
     au! BufRead,BufNewFile *.html setfiletype html
     au! BufRead,BufNewFile *.htm setfiletype htm
     au! BufRead,BufNewFile *.md setfiletype markdown
@@ -112,6 +113,8 @@ let g:go_def_mapping_enabled=0
 
 " Clojure
 let g:iced_enable_default_key_mappings = v:true
+let g:vim_parinfer_filetypes = ['lisp', 'clojure']
+let g:vim_parinfer_globs = ['*.bb', '*.clj']
 
 " GUI Options
 
