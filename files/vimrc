@@ -18,10 +18,10 @@ Plug 'jistr/vim-nerdtree-tabs'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'liquidz/vim-iced'
-Plug 'liquidz/vim-iced-asyncomplete'
+"Plug 'liquidz/vim-iced-asyncomplete'
 Plug 'luochen1990/rainbow'
 Plug 'nathanaelkane/vim-indent-guides'
-Plug 'prabirshrestha/asyncomplete.vim'
+"Plug 'prabirshrestha/asyncomplete.vim'
 Plug 'preservim/tagbar'
 Plug 'scrooloose/nerdtree'
 Plug 'tpope/vim-commentary'
@@ -47,7 +47,6 @@ color nord
 hi Comment ctermfg=13
 let g:airline_theme="nord"
 let g:airline#exenstions#tagbar#enabled=1
-"set t_ut=
 let g:rainbow_active = 1
 
 " Filetypes
@@ -77,6 +76,9 @@ autocmd FileType go setlocal noexpandtab
 autocmd FileType yaml setlocal shiftwidth=2
 autocmd FileType yaml setlocal tabstop=2
 autocmd FileType yaml setlocal softtabstop=2
+autocmd FileType python setlocal shiftwidth=2
+autocmd FileType python setlocal tabstop=2
+autocmd FileType python setlocal softtabstop=2
 
 " Make backup directory less annoying
 
@@ -105,6 +107,11 @@ set wildignore+=*.pyc,.git/*
 set nohlsearch
 set noshowmode
 
+" leader
+set timeout timeoutlen=3000 ttimeoutlen=100
+nnoremap <SPACE> <Nop>
+map <Space> <Leader>
+
 " SQL
 let g:sql_type_default = 'pgsql'
 
@@ -115,6 +122,8 @@ let g:go_def_mapping_enabled=0
 let g:iced_enable_default_key_mappings = v:true
 let g:vim_parinfer_filetypes = ['lisp', 'clojure']
 let g:vim_parinfer_globs = ['*.bb', '*.clj']
+let g:clojure_align_multiline_strings = 0
+let g:iced#repl#babashka_repl_type = 'socket'
 
 " GUI Options
 
@@ -129,29 +138,23 @@ let g:closetag_filenames = "*.html,*.js"
 
 " Tagbar
 
+map <C-d> :TagbarToggle<CR>
 let g:tagbar_autoclose=1
 let g:tagbar_autofocus=1
 
 " NERDTree
 
+map <C-t> :NERDTreeTabsToggle<CR>
 let NERDTreeIgnore = ['\.pyc$', '\.rdb$','\.egg-info', 'dist', 'target']
 let NERDTreeQuitOnOpen = 1
 let NERDTreeDirArrows = 0
 
-" asynccomplete.vim
+" fzf
+nmap <C-p> :Files<CR>
 
-inoremap <expr> <Tab>   pumvisible() ? "\<C-n>" : "\<Tab>"
-inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
-inoremap <expr> <cr>    pumvisible() ? asyncomplete#close_popup() : "\<cr>"
-
-" Bindings
-map <C-s> :set spell! spelllang=en_us<CR>
-map <C-t> :NERDTreeTabsToggle<CR>
-map <C-d> :TagbarToggle<CR>
+" undo
 nmap U <C-r>
-nmap <C-V> "+gP
-imap <C-V> <ESC>"+gPi
-vmap <C-C> "+y
+
 " Tab Movement
 nmap <A-1> 1gt
 nmap <A-2> 2gt
@@ -163,17 +166,8 @@ nmap <A-7> 7gt
 nmap <A-8> 8gt
 nmap <A-9> 9gt
 
-nmap <C-p> :Files<CR>
-
+" indent guides
 map <C-i> :IndentGuidesToggle<CR>
-"nnoremap <Space> @q
-
-set timeout timeoutlen=3000 ttimeoutlen=100
-
-nnoremap <SPACE> <Nop>
-map <Space> <Leader>
-" inoremap ,, <C-x><C-x>
-" let g:iced_default_key_mapping_leader = 'z'
 
 " scratch.vim
 let g:scratch_no_mappings=1
@@ -185,6 +179,7 @@ xmap ss :ScratchSelection<CR>
 " sexp
 let g:sexp_enable_insert_mode_mappings = 0
 
+" remove trailing whitespace
 fun! FixWhitespace()
     let l:save = winsaveview()
     keeppatterns %s/\s\+$//e
